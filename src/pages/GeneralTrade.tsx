@@ -88,29 +88,30 @@ const exportItem = {
   zh: '从乍得出口：支持乍得产品出口到区域和国际市场（农产品、阿拉伯胶、畜牧业、皮革和原材料）。',
 };
 
-// Short titles + icons + gradients for each scope card (order = same as `scope`).
-const scopeMeta: { icon: any; color: string; title: { ar: string; en: string; fr: string; zh: string } }[] = [
-  { icon: Utensils, color: 'from-orange-500 to-red-500', title: { ar: 'المواد الغذائية والاستهلاكية', en: 'Food & FMCG', fr: 'Alimentation & FMCG', zh: '食品与快消品' } },
-  { icon: SprayCan, color: 'from-sky-500 to-cyan-500', title: { ar: 'المنتجات المنزلية والعناية', en: 'Household & Personal Care', fr: 'Ménager & Soins', zh: '家居与个护' } },
-  { icon: Refrigerator, color: 'from-indigo-500 to-blue-600', title: { ar: 'الأجهزة المنزلية والإلكترونيات', en: 'Appliances & Electronics', fr: 'Électroménager & Électronique', zh: '家电与电子' } },
-  { icon: Scissors, color: 'from-pink-500 to-rose-500', title: { ar: 'أجهزة العناية الشخصية', en: 'Personal Care Devices', fr: 'Appareils de Soins', zh: '个人护理设备' } },
-  { icon: Video, color: 'from-slate-600 to-zinc-700', title: { ar: 'أنظمة الأمن والمراقبة', en: 'Security & Surveillance', fr: 'Sûreté & Surveillance', zh: '安防与监控' } },
-  { icon: Zap, color: 'from-yellow-500 to-amber-600', title: { ar: 'المولدات والمعدات الكهربائية', en: 'Generators & Electrical', fr: 'Générateurs & Électrique', zh: '发电机与电气' } },
-  { icon: Hammer, color: 'from-stone-600 to-gray-700', title: { ar: 'مواد البناء والتشطيب', en: 'Building Materials', fr: 'Matériaux de Construction', zh: '建筑与装修材料' } },
-  { icon: Car, color: 'from-red-500 to-orange-600', title: { ar: 'السيارات والمركبات التجارية', en: 'Vehicles & Trucks', fr: 'Véhicules & Camions', zh: '汽车与商用车辆' } },
-  { icon: Truck, color: 'from-amber-600 to-yellow-700', title: { ar: 'المعدات الثقيلة والآليات', en: 'Heavy Machinery', fr: 'Engins Lourds', zh: '重型机械' } },
-  { icon: Sofa, color: 'from-emerald-500 to-teal-600', title: { ar: 'الأثاث والتجهيزات', en: 'Furniture & Fit-out', fr: 'Mobilier & Aménagement', zh: '家具与装饰' } },
-  { icon: BookOpen, color: 'from-blue-500 to-indigo-600', title: { ar: 'المستلزمات المدرسية والتعليمية', en: 'School & Educational', fr: 'Scolaire & Éducatif', zh: '学习与教育用品' } },
-  { icon: Gamepad2, color: 'from-fuchsia-500 to-purple-600', title: { ar: 'الألعاب والرياضة', en: 'Toys & Sports', fr: 'Jouets & Sport', zh: '玩具与运动' } },
-  { icon: Shirt, color: 'from-violet-500 to-purple-600', title: { ar: 'الملابس والمنسوجات', en: 'Clothing & Textiles', fr: 'Vêtements & Textiles', zh: '服装与纺织' } },
-  { icon: Wheat, color: 'from-green-500 to-lime-600', title: { ar: 'المعدات الزراعية والثروة الحيوانية', en: 'Agri & Livestock', fr: 'Agriculture & Élevage', zh: '农业与畜牧' } },
-  { icon: Cog, color: 'from-gray-600 to-slate-700', title: { ar: 'المعدات الصناعية والنفط والغاز', en: 'Industrial & Oil/Gas', fr: 'Industriel & Pétrole/Gaz', zh: '工业与油气' } },
-  { icon: ShieldCheck, color: 'from-rose-600 to-red-700', title: { ar: 'أنظمة السلامة والحريق', en: 'Safety & Fire Systems', fr: 'Sécurité & Incendie', zh: '安全与消防系统' } },
+// Short titles + icons + gradients + modal background image for each scope card.
+const scopeMeta: { icon: any; color: string; image: string; title: { ar: string; en: string; fr: string; zh: string } }[] = [
+  { icon: Utensils, color: 'from-orange-500 to-red-500', image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80', title: { ar: 'المواد الغذائية والاستهلاكية', en: 'Food & FMCG', fr: 'Alimentation & FMCG', zh: '食品与快消品' } },
+  { icon: SprayCan, color: 'from-sky-500 to-cyan-500', image: 'https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1600&q=80', title: { ar: 'المنتجات المنزلية والعناية', en: 'Household & Personal Care', fr: 'Ménager & Soins', zh: '家居与个护' } },
+  { icon: Refrigerator, color: 'from-indigo-500 to-blue-600', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&q=80', title: { ar: 'الأجهزة المنزلية والإلكترونيات', en: 'Appliances & Electronics', fr: 'Électroménager & Électronique', zh: '家电与电子' } },
+  { icon: Scissors, color: 'from-pink-500 to-rose-500', image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=80', title: { ar: 'أجهزة العناية الشخصية', en: 'Personal Care Devices', fr: 'Appareils de Soins', zh: '个人护理设备' } },
+  { icon: Video, color: 'from-slate-600 to-zinc-700', image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600&q=80', title: { ar: 'أنظمة الأمن والمراقبة', en: 'Security & Surveillance', fr: 'Sûreté & Surveillance', zh: '安防与监控' } },
+  { icon: Zap, color: 'from-yellow-500 to-amber-600', image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1600&q=80', title: { ar: 'المولدات والمعدات الكهربائية', en: 'Generators & Electrical', fr: 'Générateurs & Électrique', zh: '发电机与电气' } },
+  { icon: Hammer, color: 'from-stone-600 to-gray-700', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80', title: { ar: 'مواد البناء والتشطيب', en: 'Building Materials', fr: 'Matériaux de Construction', zh: '建筑与装修材料' } },
+  { icon: Car, color: 'from-red-500 to-orange-600', image: 'https://images.unsplash.com/photo-1493238792000-8113da705763?w=1600&q=80', title: { ar: 'السيارات والمركبات التجارية', en: 'Vehicles & Trucks', fr: 'Véhicules & Camions', zh: '汽车与商用车辆' } },
+  { icon: Truck, color: 'from-amber-600 to-yellow-700', image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=80', title: { ar: 'المعدات الثقيلة والآليات', en: 'Heavy Machinery', fr: 'Engins Lourds', zh: '重型机械' } },
+  { icon: Sofa, color: 'from-emerald-500 to-teal-600', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80', title: { ar: 'الأثاث والتجهيزات', en: 'Furniture & Fit-out', fr: 'Mobilier & Aménagement', zh: '家具与装饰' } },
+  { icon: BookOpen, color: 'from-blue-500 to-indigo-600', image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=80', title: { ar: 'المستلزمات المدرسية والتعليمية', en: 'School & Educational', fr: 'Scolaire & Éducatif', zh: '学习与教育用品' } },
+  { icon: Gamepad2, color: 'from-fuchsia-500 to-purple-600', image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1600&q=80', title: { ar: 'الألعاب والرياضة', en: 'Toys & Sports', fr: 'Jouets & Sport', zh: '玩具与运动' } },
+  { icon: Shirt, color: 'from-violet-500 to-purple-600', image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=1600&q=80', title: { ar: 'الملابس والمنسوجات', en: 'Clothing & Textiles', fr: 'Vêtements & Textiles', zh: '服装与纺织' } },
+  { icon: Wheat, color: 'from-green-500 to-lime-600', image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1600&q=80', title: { ar: 'المعدات الزراعية والثروة الحيوانية', en: 'Agri & Livestock', fr: 'Agriculture & Élevage', zh: '农业与畜牧' } },
+  { icon: Cog, color: 'from-gray-600 to-slate-700', image: 'https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=1600&q=80', title: { ar: 'المعدات الصناعية والنفط والغاز', en: 'Industrial & Oil/Gas', fr: 'Industriel & Pétrole/Gaz', zh: '工业与油气' } },
+  { icon: ShieldCheck, color: 'from-rose-600 to-red-700', image: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=1600&q=80', title: { ar: 'أنظمة السلامة والحريق', en: 'Safety & Fire Systems', fr: 'Sécurité & Incendie', zh: '安全与消防系统' } },
 ];
 
 const exportMeta = {
   icon: Globe2,
   color: 'from-teal-500 to-emerald-600',
+  image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1600&q=80',
   title: { ar: 'التصدير من تشاد', en: 'Export from Chad', fr: 'Export depuis le Tchad', zh: '从乍得出口' },
 };
 
@@ -118,12 +119,12 @@ const ScopeOfTrade: React.FC = () => {
   const { language } = useLanguage();
   const [selected, setSelected] = useState<any>(null);
   const baseItems = scope[language as keyof typeof scope] || scope.en;
-  // Cards: base scope first, export moved to LAST.
   const cards = [
     ...baseItems.map((desc, i) => ({
       id: `scope-${i}`,
       icon: scopeMeta[i]?.icon,
       color: scopeMeta[i]?.color || 'from-primary to-accent',
+      image: scopeMeta[i]?.image,
       title: scopeMeta[i]?.title[language as 'ar'|'en'|'fr'|'zh'] || scopeMeta[i]?.title.en || '',
       desc,
     })),
@@ -131,6 +132,7 @@ const ScopeOfTrade: React.FC = () => {
       id: 'export',
       icon: exportMeta.icon,
       color: exportMeta.color,
+      image: exportMeta.image,
       title: exportMeta.title[language as 'ar'|'en'|'fr'|'zh'] || exportMeta.title.en,
       desc: exportItem[language as 'ar'|'en'|'fr'|'zh'] || exportItem.en,
     },
@@ -141,12 +143,12 @@ const ScopeOfTrade: React.FC = () => {
     : language === 'zh' ? '综合贸易、进口与出口'
     : 'General Trade, Import & Export';
   const intro = language === 'ar'
-    ? 'تشمل أنشطتنا في مجال التجارة العامة والاستيراد والتصدير مجموعة واسعة من المنتجات والفئات التجارية:'
+    ? 'اضغط على أي بطاقة لعرض التفاصيل الكاملة.'
     : language === 'fr'
-    ? "Nos activités en commerce général, import et export couvrent une large gamme de produits et catégories:"
+    ? "Cliquez sur une carte pour voir les détails complets."
     : language === 'zh'
-    ? '我们在综合贸易、进口和出口领域涵盖广泛的产品和类别:'
-    : 'Our activities in general trade, import and export cover a wide range of products and categories:';
+    ? '点击任意卡片查看完整详情。'
+    : 'Click any card to view full details.';
   const badgeText = language === 'ar' ? 'مجالاتنا التجارية'
     : language === 'fr' ? 'Nos Domaines'
     : language === 'zh' ? '我们的领域'
@@ -169,16 +171,18 @@ const ScopeOfTrade: React.FC = () => {
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">{intro}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-4">
           {cards.map((c, i) => {
             const Icon = c.icon;
             return (
-              <motion.article
+              <motion.button
                 key={c.id}
-                initial={{ opacity: 0, y: 20 }}
+                type="button"
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: (i % 8) * 0.04 }}
+                transition={{ delay: (i % 12) * 0.03 }}
+                whileHover={{ y: -3 }}
                 onClick={() => setSelected({
                   id: c.id,
                   icon: c.icon,
@@ -187,26 +191,17 @@ const ScopeOfTrade: React.FC = () => {
                   fullDescription: c.desc,
                   services: [],
                   color: c.color,
+                  image: c.image,
                 })}
-                className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border group cursor-pointer"
+                className="group flex flex-col items-center gap-2.5 p-3 md:p-4 rounded-2xl bg-card border border-border/60 shadow-sm hover:shadow-lg hover:border-accent/50 transition-all duration-300 text-center"
               >
-                <div className={`relative h-32 bg-gradient-to-br ${c.color} overflow-hidden`}>
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,white,transparent_50%)]" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    {Icon && <Icon className="h-14 w-14 text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300" />}
-                  </div>
-                  <div className="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-black/25 to-transparent" />
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${c.color} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                  {Icon && <Icon className="h-6 w-6 md:h-7 md:w-7 text-white" strokeWidth={2.2} />}
                 </div>
-                <div className="p-4 md:p-5">
-                  <h3 className="font-bold text-base md:text-lg text-primary mb-2 leading-snug">
-                    {c.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                    {c.desc}
-                  </p>
-                </div>
-                <div className={`h-1 bg-gradient-to-r ${c.color}`} />
-              </motion.article>
+                <h3 className="text-[12px] md:text-[13px] font-semibold text-primary leading-tight line-clamp-3">
+                  {c.title}
+                </h3>
+              </motion.button>
             );
           })}
         </div>

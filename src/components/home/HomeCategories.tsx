@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Package, Truck, Wrench, HardHat, Stethoscope, Monitor, Sun, ArrowLeft, ArrowRight, Sparkles, X } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Package, Truck, Wrench, HardHat, Stethoscope, Monitor, Sun, ArrowLeft, ArrowRight, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
@@ -17,12 +17,12 @@ const tr = (language: string, ar: string, en: string, zh: string, fr: string) =>
 const HomeCategories: React.FC = () => {
   const { language, dir } = useLanguage();
   const ArrowIcon = dir === 'rtl' ? ArrowLeft : ArrowRight;
-  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   const categories = [
     {
       to: '/general-trade',
-      image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1600&q=80',
+      // Cargo containers / global trade — no human figures
+      image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1200&q=80',
       icon: Package,
       gradient: 'from-amber-500 to-orange-600',
       title: tr(language, 'التجارة العامة', 'General Trade', '综合贸易', 'Commerce Général'),
@@ -35,7 +35,8 @@ const HomeCategories: React.FC = () => {
     },
     {
       to: '/supplies',
-      image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=1600&q=80',
+      // Warehouse shelves — no human figures
+      image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&q=80',
       icon: Truck,
       gradient: 'from-blue-500 to-indigo-600',
       title: tr(language, 'التوريدات', 'Supplies', '供应', 'Approvisionnements'),
@@ -48,7 +49,8 @@ const HomeCategories: React.FC = () => {
     },
     {
       to: '/services',
-      image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80',
+      // Logistics trucks — no human figures
+      image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80',
       icon: Wrench,
       gradient: 'from-teal-500 to-cyan-600',
       title: tr(language, 'الخدمات', 'Services', '服务', 'Services'),
@@ -61,6 +63,7 @@ const HomeCategories: React.FC = () => {
     },
     {
       to: '/construction',
+      // Construction site — no human figures
       image: new URL('@/assets/services/gen-construction-no-people.jpg', import.meta.url).href,
       icon: HardHat,
       gradient: 'from-slate-600 to-zinc-700',
@@ -74,7 +77,8 @@ const HomeCategories: React.FC = () => {
     },
     {
       to: '/medical',
-      image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1600&q=80',
+      // Medical equipment — no human figures
+      image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1200&q=80',
       icon: Stethoscope,
       gradient: 'from-red-500 to-rose-600',
       title: tr(language, 'المعدات الطبية والأدوية', 'Medical Equipment & Pharma', '医疗设备与药品', 'Équipements Médicaux & Pharma'),
@@ -87,7 +91,8 @@ const HomeCategories: React.FC = () => {
     },
     {
       to: '/it',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=80',
+      // Servers / data center — no human figures
+      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80',
       icon: Monitor,
       gradient: 'from-indigo-500 to-purple-600',
       title: tr(language, 'تكنولوجيا المعلومات', 'Information Technology', '信息技术', 'Technologies de l\'Information'),
@@ -100,7 +105,8 @@ const HomeCategories: React.FC = () => {
     },
     {
       to: '/solar',
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1600&q=80',
+      // Solar panels — no human figures
+      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80',
       icon: Sun,
       gradient: 'from-orange-500 to-yellow-500',
       title: tr(language, 'الطاقة الشمسية', 'Solar Energy', '太阳能', 'Énergie Solaire'),
@@ -112,8 +118,6 @@ const HomeCategories: React.FC = () => {
       ),
     },
   ];
-
-  const active = openIdx !== null ? categories[openIdx] : null;
 
   return (
     <section id="services" className="py-16 lg:py-24 bg-background scroll-mt-20">
@@ -138,37 +142,58 @@ const HomeCategories: React.FC = () => {
           </h2>
           <p className="text-lg max-w-3xl mx-auto text-popover-foreground">
             {tr(language,
-              'اضغط على أي مجال لاستكشاف تفاصيله.',
-              'Click any sector to explore its details.',
-              '点击任意领域以了解详情。',
-              'Cliquez sur un secteur pour découvrir ses détails.'
+              'نموذج تشغيلي موحد يدمج التجارة، التوريد، الخدمات، البناء، والقطاعات المتخصصة بما يضمن كفاءة التنفيذ واستمرارية العمليات.',
+              'A unified operating model integrating trade, supply, services, construction and specialized sectors — for efficient execution and continuous operations.',
+              '统一的运营模式，整合贸易、供应、服务、建筑与专业领域，确保高效执行与持续运营。',
+              "Un modèle opérationnel unifié intégrant commerce, approvisionnement, services, construction et secteurs spécialisés."
             )}
           </p>
         </motion.div>
 
-        {/* Compact icon cards grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-7">
           {categories.map((c, idx) => {
             const Icon = c.icon;
             return (
-              <motion.button
+              <motion.div
                 key={c.to}
-                onClick={() => setOpenIdx(idx)}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: idx * 0.05 }}
-                whileHover={{ y: -4 }}
-                className="group relative flex flex-col items-center gap-3 p-4 md:p-5 rounded-2xl bg-card border border-border/60 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all duration-300 text-center"
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
               >
-                <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${c.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                  <Icon className="h-7 w-7 md:h-8 md:w-8 text-white" strokeWidth={2.2} />
-                </div>
-                <h3 className="text-sm md:text-[15px] font-semibold text-primary leading-tight line-clamp-2">
-                  {c.title}
-                </h3>
-                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-gradient-to-r ${c.gradient} group-hover:w-3/4 transition-all duration-500 rounded-full`} />
-              </motion.button>
+                <Link
+                  to={c.to}
+                  className="group relative block h-[380px] md:h-[420px] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
+                >
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${c.gradient} opacity-20 group-hover:opacity-40 transition-opacity duration-500 mix-blend-overlay`} />
+
+                  <div className="relative h-full flex flex-col justify-end p-6 md:p-7 text-white">
+                    <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${c.gradient} flex items-center justify-center shadow-lg mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-3 drop-shadow-lg">
+                      {c.title}
+                    </h3>
+                    <p className="text-sm text-white/90 leading-relaxed mb-4 line-clamp-3 drop-shadow">
+                      {c.desc}
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-accent group-hover:gap-3 transition-all">
+                      {tr(language, 'اكتشف المزيد', 'Discover more', '了解更多', 'En savoir plus')}
+                      <ArrowIcon className="h-4 w-4" />
+                    </span>
+                  </div>
+
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${c.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-start`} />
+                </Link>
+              </motion.div>
             );
           })}
         </div>
@@ -188,79 +213,8 @@ const HomeCategories: React.FC = () => {
           </Button>
         </motion.div>
       </div>
-
-      {/* Category Modal */}
-      <AnimatePresence>
-        {active && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setOpenIdx(null)}
-              className="absolute inset-0 bg-black/80 backdrop-blur-md"
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92, y: 30 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.92, y: 30 }}
-              transition={{ type: 'spring', damping: 30, stiffness: 350 }}
-              className="relative w-full max-w-2xl bg-card rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
-              dir={dir}
-            >
-              {/* Hero image */}
-              <div className="relative h-56 md:h-64 overflow-hidden">
-                <img src={active.image} alt={active.title} className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
-                <div className={`absolute inset-0 bg-gradient-to-br ${active.gradient} opacity-50 mix-blend-overlay`} />
-
-                <button
-                  onClick={() => setOpenIdx(null)}
-                  className="absolute top-4 end-4 p-2.5 rounded-full bg-black/40 hover:bg-black/60 text-white transition-all backdrop-blur-sm border border-white/20 hover:scale-110"
-                  aria-label="Close"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-
-                <motion.div
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ delay: 0.15, type: 'spring', stiffness: 200 }}
-                  className={`absolute bottom-4 start-6 w-16 h-16 rounded-2xl bg-gradient-to-br ${active.gradient} flex items-center justify-center shadow-2xl border-4 border-white/20`}
-                >
-                  <active.icon className="h-8 w-8 text-white" />
-                </motion.div>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 overflow-y-auto p-6 md:p-7">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
-                  {active.title}
-                </h2>
-                <p className="text-muted-foreground leading-relaxed text-[15px]">
-                  {active.desc}
-                </p>
-              </div>
-
-              {/* Footer actions */}
-              <div className="p-6 pt-2 border-t border-border/50 bg-muted/30 flex flex-col sm:flex-row gap-3">
-                <Button asChild className={`flex-1 h-12 text-base font-semibold bg-gradient-to-r ${active.gradient} hover:opacity-95 text-white shadow-lg`}>
-                  <Link to={active.to} onClick={() => setOpenIdx(null)}>
-                    {tr(language, 'استكشف المزيد', 'Explore more', '了解更多', 'Explorer plus')}
-                    <ArrowIcon className="h-4 w-4 ms-2" />
-                  </Link>
-                </Button>
-                <Button variant="outline" onClick={() => setOpenIdx(null)} className="sm:w-32 h-12 border-2">
-                  {tr(language, 'إغلاق', 'Close', '关闭', 'Fermer')}
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };
 
 export default HomeCategories;
-
