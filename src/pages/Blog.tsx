@@ -14,6 +14,7 @@ import constructionManagementImg from '@/assets/blog/construction-management.jpg
 import itSolutionsImg from '@/assets/blog/it-solutions.jpg';
 import companyFormationImg from '@/assets/blog/company-formation.jpg';
 import hrSuccessImg from '@/assets/blog/hr-success.jpg';
+import blogHeroImg from '@/assets/blog/blog-hero.jpg';
 
 const blogImages: { [key: number]: string } = {
   1: supplyPartnerImg,
