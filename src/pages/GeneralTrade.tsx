@@ -119,12 +119,12 @@ const ScopeOfTrade: React.FC = () => {
   const { language } = useLanguage();
   const [selected, setSelected] = useState<any>(null);
   const baseItems = scope[language as keyof typeof scope] || scope.en;
-  // Cards: base scope first, export moved to LAST.
   const cards = [
     ...baseItems.map((desc, i) => ({
       id: `scope-${i}`,
       icon: scopeMeta[i]?.icon,
       color: scopeMeta[i]?.color || 'from-primary to-accent',
+      image: scopeMeta[i]?.image,
       title: scopeMeta[i]?.title[language as 'ar'|'en'|'fr'|'zh'] || scopeMeta[i]?.title.en || '',
       desc,
     })),
@@ -132,6 +132,7 @@ const ScopeOfTrade: React.FC = () => {
       id: 'export',
       icon: exportMeta.icon,
       color: exportMeta.color,
+      image: exportMeta.image,
       title: exportMeta.title[language as 'ar'|'en'|'fr'|'zh'] || exportMeta.title.en,
       desc: exportItem[language as 'ar'|'en'|'fr'|'zh'] || exportItem.en,
     },
@@ -142,12 +143,12 @@ const ScopeOfTrade: React.FC = () => {
     : language === 'zh' ? '综合贸易、进口与出口'
     : 'General Trade, Import & Export';
   const intro = language === 'ar'
-    ? 'تشمل أنشطتنا في مجال التجارة العامة والاستيراد والتصدير مجموعة واسعة من المنتجات والفئات التجارية:'
+    ? 'اضغط على أي بطاقة لعرض التفاصيل الكاملة.'
     : language === 'fr'
-    ? "Nos activités en commerce général, import et export couvrent une large gamme de produits et catégories:"
+    ? "Cliquez sur une carte pour voir les détails complets."
     : language === 'zh'
-    ? '我们在综合贸易、进口和出口领域涵盖广泛的产品和类别:'
-    : 'Our activities in general trade, import and export cover a wide range of products and categories:';
+    ? '点击任意卡片查看完整详情。'
+    : 'Click any card to view full details.';
   const badgeText = language === 'ar' ? 'مجالاتنا التجارية'
     : language === 'fr' ? 'Nos Domaines'
     : language === 'zh' ? '我们的领域'
@@ -170,16 +171,18 @@ const ScopeOfTrade: React.FC = () => {
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">{intro}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-4">
           {cards.map((c, i) => {
             const Icon = c.icon;
             return (
-              <motion.article
+              <motion.button
                 key={c.id}
-                initial={{ opacity: 0, y: 20 }}
+                type="button"
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: (i % 8) * 0.04 }}
+                transition={{ delay: (i % 12) * 0.03 }}
+                whileHover={{ y: -3 }}
                 onClick={() => setSelected({
                   id: c.id,
                   icon: c.icon,
@@ -188,26 +191,17 @@ const ScopeOfTrade: React.FC = () => {
                   fullDescription: c.desc,
                   services: [],
                   color: c.color,
+                  image: c.image,
                 })}
-                className="bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border group cursor-pointer"
+                className="group flex flex-col items-center gap-2.5 p-3 md:p-4 rounded-2xl bg-card border border-border/60 shadow-sm hover:shadow-lg hover:border-accent/50 transition-all duration-300 text-center"
               >
-                <div className={`relative h-32 bg-gradient-to-br ${c.color} overflow-hidden`}>
-                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,white,transparent_50%)]" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    {Icon && <Icon className="h-14 w-14 text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300" />}
-                  </div>
-                  <div className="absolute bottom-0 inset-x-0 h-8 bg-gradient-to-t from-black/25 to-transparent" />
+                <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${c.color} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                  {Icon && <Icon className="h-6 w-6 md:h-7 md:w-7 text-white" strokeWidth={2.2} />}
                 </div>
-                <div className="p-4 md:p-5">
-                  <h3 className="font-bold text-base md:text-lg text-primary mb-2 leading-snug">
-                    {c.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                    {c.desc}
-                  </p>
-                </div>
-                <div className={`h-1 bg-gradient-to-r ${c.color}`} />
-              </motion.article>
+                <h3 className="text-[12px] md:text-[13px] font-semibold text-primary leading-tight line-clamp-3">
+                  {c.title}
+                </h3>
+              </motion.button>
             );
           })}
         </div>
