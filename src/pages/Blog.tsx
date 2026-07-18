@@ -14,6 +14,7 @@ import constructionManagementImg from '@/assets/blog/construction-management.jpg
 import itSolutionsImg from '@/assets/blog/it-solutions.jpg';
 import companyFormationImg from '@/assets/blog/company-formation.jpg';
 import hrSuccessImg from '@/assets/blog/hr-success.jpg';
+import blogHeroImg from '@/assets/blog/blog-hero.jpg';
 
 const blogImages: { [key: number]: string } = {
   1: supplyPartnerImg,
@@ -32,12 +33,18 @@ const Blog: React.FC = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
-        <section className="bg-primary py-20">
-          <div className="section-container text-center">
+        <section className="relative py-24 md:py-32 overflow-hidden">
+          <img
+            src={blogHeroImg}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/75 to-primary/90" />
+          <div className="section-container text-center relative z-10">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-bold text-white mb-4"
+              className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg"
             >
               {t.blog.title}
             </motion.h1>
@@ -45,7 +52,7 @@ const Blog: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-white/80 max-w-2xl mx-auto"
+              className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow"
             >
               {t.blog.subtitle}
             </motion.p>

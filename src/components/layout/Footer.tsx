@@ -163,6 +163,35 @@ const Footer: React.FC = () => {
               border: 0
             }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
             </div>
+
+            {/* Chad Flag */}
+            <div className="mt-5 flex items-center gap-3">
+              <div
+                className="w-14 h-9 rounded-md overflow-hidden shadow-lg ring-1 ring-white/20 flex-shrink-0"
+                role="img"
+                aria-label="Flag of Chad"
+              >
+                <div className="flex h-full w-full">
+                  <div className="flex-1" style={{ backgroundColor: '#002664' }} />
+                  <div className="flex-1" style={{ backgroundColor: '#FECB00' }} />
+                  <div className="flex-1" style={{ backgroundColor: '#C60C30' }} />
+                </div>
+              </div>
+              <div className="leading-tight">
+                <p className="text-white font-semibold text-sm">
+                  {language === 'ar' ? 'جمهورية تشاد'
+                    : language === 'fr' ? 'République du Tchad'
+                    : language === 'zh' ? '乍得共和国'
+                    : 'Republic of Chad'}
+                </p>
+                <p className="text-white/60 text-xs">
+                  {language === 'ar' ? 'وحدة · عمل · تقدّم'
+                    : language === 'fr' ? 'Unité · Travail · Progrès'
+                    : language === 'zh' ? '团结 · 工作 · 进步'
+                    : 'Unity · Work · Progress'}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
