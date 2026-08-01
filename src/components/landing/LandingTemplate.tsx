@@ -36,10 +36,17 @@ export interface LandingTemplateProps {
   metaTitle: string;
   metaDescription: string;
   contactHref?: string;
+  seoTitle: string;
+  seoText: string;
 }
 
 const WA = 'https://wa.me/23565555504';
-const TEL = 'tel:+23522533242';
+const TEL = 'tel:+23565555504';
+const WA_FLOAT =
+  'https://wa.me/23565555504?text=' +
+  encodeURIComponent(
+    'مرحباً! لقد ضغطت على أيقونة الواتساب من موقعكم الإلكتروني (Global Business & Supplies). أرغب في التواصل معكم ومعرفة المزيد عن خدماتكم. شكراً لكم!'
+  );
 
 const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
   React.useEffect(() => {
@@ -54,7 +61,8 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
   }, [p.metaTitle, p.metaDescription]);
 
   return (
-    <div dir="rtl" lang="ar" className="min-h-screen bg-background font-[Cairo,sans-serif]">
+    <div dir="rtl" lang="ar" className="min-h-screen bg-background font-cairo">
+
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
