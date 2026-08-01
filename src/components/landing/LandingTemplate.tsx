@@ -109,7 +109,7 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
                 dir="ltr"
               >
                 <Phone className="h-5 w-5" />
-                +235 22 53 32 42
+                +235-65 55 55 04
               </a>
             </div>
           </motion.div>
