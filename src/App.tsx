@@ -54,6 +54,9 @@ const App = () => (
             <Route path="/sectors" element={<Sectors />} />
             <Route path="/about" element={<About />} />
             <Route path="/why-us" element={<WhyUs />} />
+            <Route path="/real-estate-rental" element={<RealEstateRentalLanding />} />
+            <Route path="/car-rental" element={<CarRentalLanding />} />
+            <Route path="/heavy-equipment-rental" element={<HeavyEquipmentRentalLanding />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/terms" element={<Terms />} />
