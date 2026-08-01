@@ -245,13 +245,25 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
               <MessageCircle className="h-5 w-5" />
               {p.ctaLabel}
             </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-bold text-white bg-white/10 border border-white/30 backdrop-blur-md hover:bg-white/20 transition-colors"
-            >
-              نموذج التواصل
-              <ArrowLeft className="h-5 w-5" />
-            </Link>
+            {p.contactHref ? (
+              <a
+                href={p.contactHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-bold text-white bg-white/10 border border-white/30 backdrop-blur-md hover:bg-white/20 transition-colors"
+              >
+                نموذج التواصل
+                <ArrowLeft className="h-5 w-5" />
+              </a>
+            ) : (
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-bold text-white bg-white/10 border border-white/30 backdrop-blur-md hover:bg-white/20 transition-colors"
+              >
+                نموذج التواصل
+                <ArrowLeft className="h-5 w-5" />
+              </Link>
+            )}
           </div>
           <p className="text-white/50 text-xs mt-10">
             Global Business &amp; Supplies — نجامينا، تشاد
