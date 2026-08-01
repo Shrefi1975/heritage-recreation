@@ -4,7 +4,11 @@ import { Car, ShieldCheck, Timer, UserCheck, Wrench, CalendarRange } from 'lucid
 import heroImg from '@/assets/landing/lp-car-hero.jpg';
 import fleetImg from '@/assets/services/luxury-4wd.jpg';
 
-const CarRentalLanding: React.FC = () => (
+interface Props {
+  contactHref?: string;
+}
+
+const CarRentalLanding: React.FC<Props> = ({ contactHref }) => (
   <LandingTemplate
     metaTitle="إيجار السيارات في تشاد | أسطول حديث مع سائق — Global Business & Supplies"
     metaDescription="تأجير سيارات سياحية ومركبات دفع رباعي وحافلات صغيرة في نجامينا وجميع أنحاء تشاد، مع أو بدون سائق، تأمين شامل وعقود يومية وشهرية وطويلة الأمد."
@@ -50,6 +54,7 @@ const CarRentalLanding: React.FC = () => (
     ]}
     finalTitle="سيارتك جاهزة… فقط أخبرنا بالموعد"
     finalText="تواصل معنا الآن للحصول على عرض سعر خلال دقائق، مع خصومات خاصة للعقود الشهرية والطويلة."
+    contactHref={contactHref}
   />
 );
 

@@ -4,7 +4,11 @@ import { Tractor, HardHat, Wrench, Gauge, Truck, LifeBuoy } from 'lucide-react';
 import heroImg from '@/assets/landing/lp-heavy-hero.jpg';
 import siteImg from '@/assets/services/heavy-equipment-african.jpg';
 
-const HeavyEquipmentRentalLanding: React.FC = () => (
+interface Props {
+  contactHref?: string;
+}
+
+const HeavyEquipmentRentalLanding: React.FC<Props> = ({ contactHref }) => (
   <LandingTemplate
     metaTitle="إيجار المعدات الثقيلة في تشاد | حفارات ورافعات — Global Business & Supplies"
     metaDescription="تأجير معدات ثقيلة في تشاد: حفارات، جرافات، رافعات، شاحنات قلابة ومولدات، مع مشغلين معتمدين وصيانة ودعم فني وعقود يومية وطويلة الأمد."
@@ -50,6 +54,7 @@ const HeavyEquipmentRentalLanding: React.FC = () => (
     ]}
     finalTitle="لا تدع توقف المعدات يؤخر مشروعك"
     finalText="أرسل لنا نطاق العمل والمدة، وسنعود إليك بخطة تجهيز وعرض سعر مفصل خلال 24 ساعة."
+    contactHref={contactHref}
   />
 );
 
