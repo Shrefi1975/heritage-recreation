@@ -149,12 +149,12 @@ const Links: React.FC = () => {
           </div>
 
           {/* Main site */}
-          <Link
+          <SmartLink
             to="/"
             className="mt-6 flex items-center justify-center gap-2 rounded-2xl border border-accent/40 bg-accent/10 px-4 py-3.5 font-semibold text-accent hover:bg-accent hover:text-accent-foreground transition-all"
           >
             <Globe className="h-5 w-5" /> زيارة الموقع الرسمي
-          </Link>
+          </SmartLink>
 
           {/* Socials */}
           <div className="mt-10 flex flex-wrap justify-center gap-3">
