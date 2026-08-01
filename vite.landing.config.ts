@@ -12,6 +12,9 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  define: {
+    "import.meta.env.VITE_STANDALONE": JSON.stringify("true"),
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
