@@ -54,6 +54,7 @@ const HeavyEquipmentRentalLanding: React.FC<Props> = ({ contactHref }) => (
     ]}
     finalTitle="لا تدع توقف المعدات يؤخر مشروعك"
     finalText="أرسل لنا نطاق العمل والمدة، وسنعود إليك بخطة تجهيز وعرض سعر مفصل خلال 24 ساعة."
+    contactHref={contactHref}
   />
 );
 
