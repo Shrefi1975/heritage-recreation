@@ -17,7 +17,7 @@ const HeavyEquipmentRentalLanding: React.FC<Props> = ({ contactHref }) => (
     subtitle="حفارات وجرافات ورافعات وشاحنات قلابة ومولدات، مع مشغلين معتمدين وصيانة ميدانية ودعم فني يضمن استمرار العمل دون توقف مكلف."
     ctaLabel="اطلب عرض سعر للمشروع"
     heroImage={heroImg}
-    accentClass="from-orange-500 to-red-600"
+    accentClass="from-accent to-accent-glow"
     stats={[
       { value: '+60', label: 'آلية ومعدة' },
       { value: '98%', label: 'جاهزية تشغيلية' },
@@ -54,6 +54,8 @@ const HeavyEquipmentRentalLanding: React.FC<Props> = ({ contactHref }) => (
     ]}
     finalTitle="لا تدع توقف المعدات يؤخر مشروعك"
     finalText="أرسل لنا نطاق العمل والمدة، وسنعود إليك بخطة تجهيز وعرض سعر مفصل خلال 24 ساعة."
+    seoTitle="تأجير المعدات الثقيلة في تشاد – Global Business & Supplies (GBS)"
+    seoText="تقدم Global Business & Supplies (GBS) خدمات تأجير المعدات الثقيلة في تشاد لدعم مشاريع البناء، والطرق، والتعدين، والبنية التحتية، والقطاعين العام والخاص، مع توفير معدات حديثة ومشغلين ذوي خبرة لتلبية متطلبات المشاريع في جميع أنحاء تشاد. تشمل خدماتنا تأجير مختلف أنواع معدات وآليات البناء، ومنها: الحفارات (Excavators)، اللودر (Wheel Loaders)، الجريدر (Motor Graders)، المداحل (Compactors & Rollers)، الشاحنات القلابة (Dump Trucks)، شاحنات نقل المعدات الثقيلة (Lowbed Trucks)، الجرافات (Bulldozers)، الرافعات (Cranes)، الشيولات ومعدات مناولة المواد، ومعدات الحفر والتسوية ونقل التربة. سواء كنت تبحث عن تأجير حفارات في تشاد، أو لودر للإيجار، أو جريدر، أو دامب تراك، أو لوبيد تراك لنقل المعدات الثقيلة، فإن Global Business & Supplies (GBS) توفر حلولاً موثوقة بأسعار تنافسية، مع خدمات مرنة تناسب المشاريع قصيرة وطويلة الأجل في أنجمينا، أبشي، وجميع مناطق تشاد."
     contactHref={contactHref}
   />
 );
