@@ -69,14 +69,18 @@ const Links: React.FC = () => {
         {/* Phones */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {phones.map((p) => (
-            <a key={p} href={`tel:${p.replace(/\s/g, '')}`}
+            <a key={p.number} href={`tel:${p.number.replace(/\s/g, '')}`}
               className="flex items-center justify-center gap-2 rounded-2xl bg-card border border-border shadow-[var(--shadow-soft)] px-4 py-3.5 font-semibold text-foreground hover:shadow-[var(--shadow-card)] hover:-translate-y-0.5 transition-all">
               <span className="w-9 h-9 rounded-full bg-accent/10 text-accent flex items-center justify-center">
-                <Phone className="h-4 w-4" />
+                <p.icon className="h-4 w-4" />
               </span>
-              <span dir="ltr">{p}</span>
+              <span className="text-start leading-tight">
+                <span className="block text-xs text-muted-foreground font-normal">{p.label}</span>
+                <span className="block" dir="ltr">{p.number}</span>
+              </span>
             </a>
           ))}
+
         </div>
 
         {/* Links */}
