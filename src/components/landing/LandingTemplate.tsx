@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Phone, MessageCircle, ArrowLeft, CheckCircle2, Sparkles, type LucideIcon } from 'lucide-react';
+import gbsLogo from '@/assets/logo-new.png';
 
 export interface LandingBenefit {
   icon: LucideIcon;
@@ -84,6 +85,15 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
+            <div className="inline-flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-2xl px-5 py-3 mb-7 shadow-[0_12px_35px_-12px_rgba(0,0,0,0.6)]">
+              <img
+                src={gbsLogo}
+                alt="Global Business & Supplies"
+                className="h-12 md:h-14 w-auto object-contain"
+                loading="eager"
+              />
+            </div>
+
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/25 rounded-full text-white font-semibold text-xs py-2 px-4 mb-6">
               <Sparkles className="h-3.5 w-3.5 text-accent" />
               {p.badge}
