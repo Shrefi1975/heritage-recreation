@@ -17,7 +17,7 @@ const CarRentalLanding: React.FC<Props> = ({ contactHref }) => (
     subtitle="سيارات سياحية ومركبات دفع رباعي وحافلات صغيرة، مع أو بدون سائق، صيانة دورية وتأمين شامل — لتصل إلى وجهتك بأمان مهما كانت الطريق."
     ctaLabel="احجز سيارتك الآن"
     heroImage={heroImg}
-    accentClass="from-sky-500 to-blue-600"
+    accentClass="from-accent to-accent-glow"
     stats={[
       { value: '+80', label: 'مركبة في الأسطول' },
       { value: '3 ساعات', label: 'سرعة التجهيز' },

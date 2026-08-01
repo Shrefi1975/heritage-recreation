@@ -17,7 +17,7 @@ const RealEstateRentalLanding: React.FC<Props> = ({ contactHref }) => (
     subtitle="نختار لك المنزل المناسب في أفضل المواقع، مؤثثاً بالكامل أو غير مؤثث، بعقود مرنة وإجراءات تُنجز في أيام لا أسابيع — لك ولعائلتك أو لفريق عملك."
     ctaLabel="احجز معاينة مجانية الآن"
     heroImage={heroImg}
-    accentClass="from-emerald-500 to-teal-600"
+    accentClass="from-accent to-accent-glow"
     stats={[
       { value: '+150', label: 'وحدة سكنية متاحة' },
       { value: '48 ساعة', label: 'متوسط زمن المعاينة' },

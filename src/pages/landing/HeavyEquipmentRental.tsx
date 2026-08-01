@@ -17,7 +17,7 @@ const HeavyEquipmentRentalLanding: React.FC<Props> = ({ contactHref }) => (
     subtitle="حفارات وجرافات ورافعات وشاحنات قلابة ومولدات، مع مشغلين معتمدين وصيانة ميدانية ودعم فني يضمن استمرار العمل دون توقف مكلف."
     ctaLabel="اطلب عرض سعر للمشروع"
     heroImage={heroImg}
-    accentClass="from-orange-500 to-red-600"
+    accentClass="from-accent to-accent-glow"
     stats={[
       { value: '+60', label: 'آلية ومعدة' },
       { value: '98%', label: 'جاهزية تشغيلية' },
