@@ -54,6 +54,7 @@ const CarRentalLanding: React.FC<Props> = ({ contactHref }) => (
     ]}
     finalTitle="سيارتك جاهزة… فقط أخبرنا بالموعد"
     finalText="تواصل معنا الآن للحصول على عرض سعر خلال دقائق، مع خصومات خاصة للعقود الشهرية والطويلة."
+    contactHref={contactHref}
   />
 );
 
