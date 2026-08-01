@@ -14,6 +14,7 @@ import BlogPost from "./pages/BlogPost";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import Landing from "./pages/Landing";
+import LinksPage from "./pages/Links";
 import Partnerships from "./pages/Partnerships";
 import ServiceDetail from "./pages/ServiceDetail";
 import GeneralTrade from "./pages/GeneralTrade";
