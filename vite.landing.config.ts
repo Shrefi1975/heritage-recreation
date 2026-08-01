@@ -25,11 +25,12 @@ export default defineConfig({
         "real-estate-rental": path.resolve(__dirname, "real-estate-rental.html"),
         "car-rental": path.resolve(__dirname, "car-rental.html"),
         "heavy-equipment-rental": path.resolve(__dirname, "heavy-equipment-rental.html"),
+        "links": path.resolve(__dirname, "links.html"),
       },
       output: {
         entryFileNames: (chunk) => {
           const name = chunk.name;
-          if (name === 'real-estate-rental' || name === 'car-rental' || name === 'heavy-equipment-rental') {
+          if (name === 'real-estate-rental' || name === 'car-rental' || name === 'heavy-equipment-rental' || name === 'links') {
             return `assets/[name]/[name]-[hash].js`;
           }
           return `assets/[name]-[hash].js`;
