@@ -54,6 +54,7 @@ const RealEstateRentalLanding: React.FC<Props> = ({ contactHref }) => (
     ]}
     finalTitle="منزلك القادم في تشاد على بُعد رسالة واحدة"
     finalText="أرسل لنا متطلباتك اليوم واحصل على قائمة وحدات مطابقة خلال 24 ساعة، دون أي التزام."
+    contactHref={contactHref}
   />
 );
 
