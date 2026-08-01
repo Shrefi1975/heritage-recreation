@@ -41,15 +41,18 @@ export interface LandingTemplateProps {
   seoText: string;
 }
 
-const WA = 'https://wa.me/23565555504';
+const PHONE = '23565555504';
 const TEL = 'tel:+23565555504';
-const WA_FLOAT =
-  'https://wa.me/23565555504?text=' +
-  encodeURIComponent(
-    'مرحباً! لقد ضغطت على أيقونة الواتساب من موقعكم الإلكتروني (Global Business & Supplies). أرغب في التواصل معكم ومعرفة المزيد عن خدماتكم. شكراً لكم!'
-  );
+const wa = (msg: string) => `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+const WA_FLOAT = wa(
+  'مرحباً! لقد ضغطت على أيقونة الواتساب من موقعكم الإلكتروني (Global Business & Supplies). أرغب في التواصل معكم ومعرفة المزيد عن خدماتكم. شكراً لكم!'
+);
 
 const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
+  const WA = wa(
+    `مرحباً! لقد زرت صفحة "${p.badge}" على موقع Global Business & Supplies (GBS)، وأرغب في الاستفسار عن الخدمة والحصول على عرض سعر. شكراً لكم!`
+  );
+
   React.useEffect(() => {
     document.title = p.metaTitle;
     let meta = document.querySelector('meta[name="description"]');

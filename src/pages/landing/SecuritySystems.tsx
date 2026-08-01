@@ -1,7 +1,7 @@
 import React from 'react';
 import LandingTemplate from '@/components/landing/LandingTemplate';
 import { Camera, ShieldCheck, MonitorSmartphone, Bell, Lock, Wrench } from 'lucide-react';
-import heroImg from '@/assets/services/gen-it-security.jpg';
+import heroImg from '@/assets/landing/lp-security-hero.jpg';
 import detailsImg from '@/assets/services/gen-gt-safety-security.jpg';
 
 interface Props {
