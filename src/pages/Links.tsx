@@ -1,10 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Phone, Home, Car, Truck, Construction, ShieldCheck, Wrench, Globe, MapPin } from 'lucide-react';
+import { Phone, Home, Car, Truck, Construction, ShieldCheck, Wrench, Globe, MapPin, Smartphone } from 'lucide-react';
 import logo from '@/assets/logo-new.png';
+import heroBg from '@/assets/landing/links-hero-bg.jpg';
 
-const phones = ['+235 65 55 55 04', '+235 66 55 55 04'];
+const phones = [
+  { number: '+235 65 55 55 04', label: 'هاتف محمول', icon: Smartphone },
+  { number: '+235 22 53 32 42', label: 'هاتف ثابت', icon: Phone },
+];
+
+const WA_TEXT = encodeURIComponent(
+  'مرحباً! تواصلت معكم عبر صفحة الروابط الخاصة بـ Global Business & Supplies (GBS). أرغب في معرفة المزيد عن خدماتكم. شكراً لكم!'
+);
+const WA_LINK = `https://wa.me/23565555504?text=${WA_TEXT}`;
+
 
 const links = [
   { to: '/real-estate-rental', icon: Home, title: 'إيجار المنازل والعقارات', desc: 'شقق وفلل ومكاتب في أنجمينا' },
