@@ -14,6 +14,7 @@ import BlogPost from "./pages/BlogPost";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import Landing from "./pages/Landing";
+import LinksPage from "./pages/Links";
 import Partnerships from "./pages/Partnerships";
 import ServiceDetail from "./pages/ServiceDetail";
 import GeneralTrade from "./pages/GeneralTrade";
@@ -67,6 +68,7 @@ const App = () => (
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/landing" element={<Landing />} />
+            <Route path="/links" element={<LinksPage />} />
             <Route path="/global-business" element={<Navigate to="/" replace />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
