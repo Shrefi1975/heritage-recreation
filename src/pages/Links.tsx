@@ -37,8 +37,11 @@ const Links: React.FC = () => {
   return (
     <div dir="rtl" className="min-h-screen bg-muted/40 font-cairo">
       {/* Header banner */}
-      <header className="relative overflow-hidden" style={{ background: 'var(--gradient-primary)' }}>
-        <div className="absolute inset-0 opacity-30" style={{ background: 'radial-gradient(600px circle at 20% 0%, hsl(var(--accent)/0.55), transparent 60%)' }} />
+      <header className="relative overflow-hidden">
+        <img src={heroBg} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{ background: 'var(--gradient-primary)', opacity: 0.82 }} />
+        <div className="absolute inset-0 opacity-40" style={{ background: 'radial-gradient(600px circle at 20% 0%, hsl(var(--accent)/0.55), transparent 60%)' }} />
+
         <div className="relative section-container pt-12 pb-24 text-center">
           <motion.img
             initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
