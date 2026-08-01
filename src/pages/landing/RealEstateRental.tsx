@@ -4,7 +4,11 @@ import { Home, KeyRound, ShieldCheck, Sofa, MapPin, FileSignature } from 'lucide
 import heroImg from '@/assets/landing/lp-house-hero.jpg';
 import interiorImg from '@/assets/landing/lp-house-interior.jpg';
 
-const RealEstateRentalLanding: React.FC = () => (
+interface Props {
+  contactHref?: string;
+}
+
+const RealEstateRentalLanding: React.FC<Props> = ({ contactHref }) => (
   <LandingTemplate
     metaTitle="إيجار المنازل في تشاد | فلل وشقق مؤثثة — Global Business & Supplies"
     metaDescription="منازل وشقق وفلل مؤثثة وغير مؤثثة للإيجار في نجامينا وكبرى مدن تشاد، بعقود مرنة قصيرة وطويلة الأمد ودعم كامل للأفراد والشركات والمنظمات."
