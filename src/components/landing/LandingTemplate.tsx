@@ -35,6 +35,7 @@ export interface LandingTemplateProps {
   finalText: string;
   metaTitle: string;
   metaDescription: string;
+  contactHref?: string;
 }
 
 const WA = 'https://wa.me/23565555504';
