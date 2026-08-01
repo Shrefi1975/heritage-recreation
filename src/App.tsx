@@ -27,6 +27,9 @@ import Contact from "./pages/Contact";
 import RealEstateRentalLanding from "./pages/landing/RealEstateRental";
 import CarRentalLanding from "./pages/landing/CarRental";
 import HeavyEquipmentRentalLanding from "./pages/landing/HeavyEquipmentRental";
+import TransportCameroonChadLanding from "./pages/landing/TransportCameroonChad";
+import SecuritySystemsLanding from "./pages/landing/SecuritySystems";
+import ConstructionContractingLanding from "./pages/landing/ConstructionContracting";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +60,9 @@ const App = () => (
             <Route path="/real-estate-rental" element={<RealEstateRentalLanding />} />
             <Route path="/car-rental" element={<CarRentalLanding />} />
             <Route path="/heavy-equipment-rental" element={<HeavyEquipmentRentalLanding />} />
+            <Route path="/transport-cameroon-chad" element={<TransportCameroonChadLanding />} />
+            <Route path="/security-systems" element={<SecuritySystemsLanding />} />
+            <Route path="/construction-contracting" element={<ConstructionContractingLanding />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/terms" element={<Terms />} />
