@@ -24,6 +24,9 @@ import MedicalPage from "./pages/MedicalPage";
 import ServicesPage from "./pages/ServicesPage";
 import ConstructionPage from "./pages/ConstructionPage";
 import Contact from "./pages/Contact";
+import RealEstateRentalLanding from "./pages/landing/RealEstateRental";
+import CarRentalLanding from "./pages/landing/CarRental";
+import HeavyEquipmentRentalLanding from "./pages/landing/HeavyEquipmentRental";
 
 const queryClient = new QueryClient();
 
