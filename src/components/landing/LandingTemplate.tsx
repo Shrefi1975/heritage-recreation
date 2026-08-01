@@ -134,6 +134,18 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
         </div>
       </section>
 
+      {/* SEO INTRO */}
+      <section className="py-14 md:py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-5">
+          <h2 className="text-xl md:text-3xl font-extrabold text-primary mb-5 leading-snug">
+            {p.seoTitle}
+          </h2>
+          <p className="text-muted-foreground leading-loose text-sm md:text-base">{p.seoText}</p>
+        </div>
+      </section>
+
+
+
       {/* BENEFITS */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/40">
         <div className="max-w-6xl mx-auto px-5">
