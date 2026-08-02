@@ -300,24 +300,57 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-bold text-white bg-white/10 border border-white/30 backdrop-blur-md hover:bg-white/20 transition-colors"
               >
-                نموذج التواصل
-                <ArrowLeft className="h-5 w-5" />
+                {ui.contactForm}
+                <Arrow className="h-5 w-5" />
               </a>
             ) : (
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-bold text-white bg-white/10 border border-white/30 backdrop-blur-md hover:bg-white/20 transition-colors"
               >
-                نموذج التواصل
-                <ArrowLeft className="h-5 w-5" />
+                {ui.contactForm}
+                <Arrow className="h-5 w-5" />
               </Link>
             )}
           </div>
-          <p className="text-white/50 text-xs mt-10">
-            Global Business &amp; Supplies — نجامينا، تشاد
-          </p>
+
+          {/* COMPANY CARD */}
+          <div className="mt-14 mx-auto max-w-xl rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md p-6 md:p-7 text-center shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
+            <img
+              src={gbsLogo}
+              alt="Global Business & Supplies"
+              className="h-10 md:h-12 w-auto object-contain mx-auto mb-4 brightness-0 invert opacity-90"
+              loading="lazy"
+            />
+            <p className="text-white font-extrabold tracking-wide text-base md:text-lg">
+              Global Business &amp; Supplies
+            </p>
+            <div className="mt-2 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+              <span className="inline-flex items-center gap-1.5 text-white/70">
+                <MapPin className="h-4 w-4 text-accent shrink-0" />
+                {ui.location}
+              </span>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-accent transition-colors break-all"
+                dir="ltr"
+              >
+                <Mail className="h-4 w-4 text-accent shrink-0" />
+                {EMAIL}
+              </a>
+              <a
+                href={TEL}
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-accent transition-colors"
+                dir="ltr"
+              >
+                <Phone className="h-4 w-4 text-accent shrink-0" />
+                +235-65 55 55 04
+              </a>
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* WHATSAPP FLOATING BUTTON */}
       <a
