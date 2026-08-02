@@ -86,17 +86,23 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-primary/70 via-primary/45 to-primary/15" />
+          <div className={`absolute inset-0 bg-gradient-to-${isRtl ? 'l' : 'r'} from-primary/70 via-primary/45 to-primary/15`} />
           <div className="absolute inset-0 bg-black/15" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-5 py-20 md:py-32">
+          <div className="flex justify-end mb-6">
+            {p.onLangChange && (
+              <LandingLangSwitcher lang={lang} setLang={p.onLangChange} />
+            )}
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
+
             <div className="inline-flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-2xl px-5 py-3 mb-7 shadow-[0_12px_35px_-12px_rgba(0,0,0,0.6)]">
               <img
                 src={gbsLogo}
