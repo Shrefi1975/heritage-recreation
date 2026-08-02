@@ -2,7 +2,7 @@ import React from 'react';
 import LandingTemplate from '@/components/landing/LandingTemplate';
 import { Tractor, HardHat, Wrench, Gauge, Truck, LifeBuoy } from 'lucide-react';
 import heroImg from '@/assets/landing/lp-heavy-hero.jpg';
-import siteImg from '@/assets/services/heavy-equipment-african.jpg';
+import siteImg from '@/assets/landing/heavy-fleet.png';
 
 interface Props {
   contactHref?: string;
