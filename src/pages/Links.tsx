@@ -127,9 +127,10 @@ const Links: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
               >
-                <SmartLink
-                  to={item.to}
-                  className="group flex items-center gap-4 rounded-2xl bg-card border border-border px-4 py-4 hover:-translate-y-1 hover:border-accent/50 hover:bg-muted/40 transition-all duration-300"
+                <button
+                  type="button"
+                  onClick={() => setActive(item)}
+                  className="w-full group flex items-center gap-4 rounded-2xl bg-card border border-border px-4 py-4 hover:-translate-y-1 hover:border-accent/50 hover:bg-muted/40 transition-all duration-300 text-start"
                 >
                   <span
                     className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
@@ -142,11 +143,11 @@ const Links: React.FC = () => {
                     <span className="block text-sm text-muted-foreground truncate">{item.desc}</span>
                   </span>
                   <span className="text-muted-foreground transition-all group-hover:-translate-x-1" style={{ color: item.color }}>‹</span>
-                </SmartLink>
-
+                </button>
               </motion.div>
             ))}
           </div>
+
 
           {/* Main site */}
           <SmartLink
