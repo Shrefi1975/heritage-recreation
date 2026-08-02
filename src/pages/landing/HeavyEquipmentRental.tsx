@@ -2,7 +2,7 @@ import React from 'react';
 import LandingTemplate from '@/components/landing/LandingTemplate';
 import { Tractor, HardHat, Wrench, Gauge, Truck, LifeBuoy } from 'lucide-react';
 import heroImg from '@/assets/landing/lp-heavy-hero.jpg';
-import siteImg from '@/assets/services/heavy-equipment-african.jpg';
+import siteAsset from '@/assets/landing/heavy-fleet.png.asset.json';
 
 interface Props {
   contactHref?: string;
@@ -36,7 +36,7 @@ const HeavyEquipmentRentalLanding: React.FC<Props> = ({ contactHref }) => (
     ]}
     detailsTitle="معدات لكل مرحلة من مراحل المشروع"
     detailsText="نقدم خدمات تأجير المعدات الثقيلة في تشاد لقطاعات البناء والنفط والغاز والتعدين والمنظمات غير الحكومية والمشاريع الحكومية. انطلاقاً من مقرنا في نجامينا نوفر حلول تأجير قصيرة وطويلة الأجل، بالإضافة إلى تجهيز المشاريع بالكامل في جميع أنحاء البلاد بما في ذلك المناطق النائية."
-    detailsImage={siteImg}
+    detailsImage={siteAsset.url}
     detailsList={[
       'حفارات وجرافات ولوادر وممهدات',
       'رافعات ومعدات رفع بمختلف الحمولات',

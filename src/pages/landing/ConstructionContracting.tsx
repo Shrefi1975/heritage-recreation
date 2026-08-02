@@ -1,7 +1,7 @@
 import React from 'react';
 import LandingTemplate from '@/components/landing/LandingTemplate';
 import { Building2, HardHat, Ruler, Sun, Hammer, ClipboardCheck } from 'lucide-react';
-import heroImg from '@/assets/services/construction-african.jpg';
+import heroImg from '@/assets/landing/lp-construction-hero.jpg';
 import detailsImg from '@/assets/services/gen-construction-no-people.jpg';
 
 interface Props {

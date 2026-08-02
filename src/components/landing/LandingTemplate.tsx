@@ -77,8 +77,8 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-primary/95 via-primary/80 to-primary/40" />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-l from-primary/70 via-primary/45 to-primary/15" />
+          <div className="absolute inset-0 bg-black/15" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-5 py-20 md:py-32">
