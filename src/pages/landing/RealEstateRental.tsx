@@ -178,7 +178,7 @@ const content: Record<LandingLang, Content> = {
       "Global Business & Supplies (GBS) propose des services de location de maisons au Tchad, avec une large gamme d'options répondant aux besoins des particuliers, des entreprises, des organisations internationales et des missions diplomatiques, incluant la location de villas, d'appartements meublés, d'appartements non meublés, de maisons résidentielles, de bureaux et de divers types de biens immobiliers à N'Djamena et à Abéché. Nous proposons des solutions de location flexibles adaptées aux locations journalières, hebdomadaires, mensuelles et annuelles, avec des biens soigneusement sélectionnés dans des emplacements privilégiés, répondant aux besoins de logement, d'affaires, d'hébergement du personnel et des experts, ainsi que des projets internationaux. Si vous cherchez à louer une maison au Tchad, un appartement meublé à N'Djamena, une villa à louer à Abéché, ou un bureau ou un bien immobilier à louer au Tchad, Global Business & Supplies (GBS) vous propose des options variées, des prix compétitifs et un service professionnel pour vous aider à trouver rapidement et facilement le bien qui vous convient.",
   },
   zh: {
-    metaTitle: '乍得房屋租赁 | 精装别墅与公寓 — Global Business & Supplies',
+    metaTitle: '乍得房屋租赁 | 精装别墅与公寓 — 环球商业与供应有限公司（GBS）',
     metaDescription:
       '在恩贾梅纳及乍得主要城市提供精装及未装修的住宅、公寓和别墅出租，租约灵活，支持短租与长租，为个人、企业和机构提供全方位服务。',
     badge: '恩贾梅纳及乍得主要城市',
@@ -222,9 +222,9 @@ const content: Record<LandingLang, Content> = {
     ],
     finalTitle: '在乍得的下一个家，只差一条消息',
     finalText: '今天就告诉我们您的需求，24小时内即可获得匹配房源清单，无需任何承诺。',
-    seoTitle: '乍得住宅、公寓及房产租赁 – Global Business & Supplies (GBS)',
+    seoTitle: '乍得住宅、公寓及房产租赁 – 环球商业与供应有限公司（GBS）',
     seoText:
-      'Global Business & Supplies (GBS) 在乍得提供丰富多样的住宅租赁服务，满足个人、企业、国际机构及外交使团的需求，涵盖别墅、精装公寓、未装修公寓、住宅、办公室以及恩贾梅纳与阿贝歇各类房产的租赁。我们提供适用于日租、周租、月租及年租的灵活租赁方案，房源均经过精心挑选，位于优质地段，满足居住、商务、员工及专家住宿以及国际项目的各类需求。如果您正在寻找乍得的房屋租赁、恩贾梅纳的精装公寓、阿贝歇的别墅出租，或乍得的办公室及房产出租，Global Business & Supplies (GBS) 将为您提供多样化的选择、具竞争力的价格以及专业的服务，助您快速轻松地找到合适的房产。',
+      '环球商业与供应有限公司（GBS） 在乍得提供丰富多样的住宅租赁服务，满足个人、企业、国际机构及外交使团的需求，涵盖别墅、精装公寓、未装修公寓、住宅、办公室以及恩贾梅纳与阿贝歇各类房产的租赁。我们提供适用于日租、周租、月租及年租的灵活租赁方案，房源均经过精心挑选，位于优质地段，满足居住、商务、员工及专家住宿以及国际项目的各类需求。如果您正在寻找乍得的房屋租赁、恩贾梅纳的精装公寓、阿贝歇的别墅出租，或乍得的办公室及房产出租，环球商业与供应有限公司（GBS） 将为您提供多样化的选择、具竞争力的价格以及专业的服务，助您快速轻松地找到合适的房产。',
   },
 };
 

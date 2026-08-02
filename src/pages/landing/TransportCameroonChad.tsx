@@ -180,7 +180,7 @@ const content: Record<LandingLang, Content> = {
       'Global Business & Supplies (GBS) propose des services de transport et de fret du Cameroun vers le Tchad, avec des solutions logistiques intégrées pour acheminer marchandises, conteneurs et équipements depuis le port de Kribi et la ville de Douala vers N\u2019Djaména, puis vers toutes les villes et régions du territoire tchadien. Nous offrons des services de transport fiables et sécurisés aux entreprises, organisations internationales, institutions publiques et commerçants, incluant le transport de conteneurs, de marchandises générales, d\u2019équipements lourds et de matériaux de construction, tout en gérant le dédouanement, le suivi et la coordination logistique afin de garantir l\u2019arrivée des expéditions dans les délais. Que vous recherchiez un transport de Douala à N\u2019Djaména, un envoi depuis le port de Kribi vers le Tchad, ou un transport de marchandises à l\u2019intérieur du Tchad, Global Business & Supplies (GBS) vous propose des services professionnels couvrant toutes les étapes de la chaîne logistique, du port jusqu\u2019à votre destination finale dans n\u2019importe quelle ville du Tchad, à des prix compétitifs et avec un service de haute qualité.',
   },
   zh: {
-    metaTitle: '喀麦隆至乍得运输与货运服务 | 杜阿拉与克里比 — Global Business & Supplies',
+    metaTitle: '喀麦隆至乍得运输与货运服务 | 杜阿拉与克里比 — 环球商业与供应有限公司（GBS）',
     metaDescription:
       '提供从克里比港和杜阿拉港到恩贾梅纳及乍得各城市的集装箱、普通货物和设备运输服务，包括清关、货物追踪和物流协调。',
     badge: '杜阿拉 · 克里比 · 恩贾梅纳',
@@ -224,9 +224,9 @@ const content: Record<LandingLang, Content> = {
     ],
     finalTitle: '我们已准备好为您运输货物',
     finalText: '请联系我们，短时间内获取涵盖运输和清关的全面报价。',
-    seoTitle: '喀麦隆至乍得运输与货运服务 – Global Business & Supplies (GBS)',
+    seoTitle: '喀麦隆至乍得运输与货运服务 – 环球商业与供应有限公司（GBS）',
     seoText:
-      'Global Business & Supplies (GBS) 提供从喀麦隆到乍得的运输与货运服务，为货物、集装箱和设备从克里比港及杜阿拉市运往恩贾梅纳，再到乍得境内所有城市和地区，提供一体化物流解决方案。我们为企业、国际组织、政府机构和商户提供可靠、安全的运输服务，包括集装箱运输、普通货物运输、重型设备及建筑材料运输，同时全程管理清关、货物追踪和物流协调，确保货物按时抵达。无论您是需要从杜阿拉到恩贾梅纳的运输，从克里比港到乍得的货运，还是乍得境内的货物运输，Global Business & Supplies (GBS) 都能为您提供覆盖供应链各个环节的专业服务，从港口到乍得境内任意最终目的地，价格具有竞争力，服务品质卓越。',
+      '环球商业与供应有限公司（GBS） 提供从喀麦隆到乍得的运输与货运服务，为货物、集装箱和设备从克里比港及杜阿拉市运往恩贾梅纳，再到乍得境内所有城市和地区，提供一体化物流解决方案。我们为企业、国际组织、政府机构和商户提供可靠、安全的运输服务，包括集装箱运输、普通货物运输、重型设备及建筑材料运输，同时全程管理清关、货物追踪和物流协调，确保货物按时抵达。无论您是需要从杜阿拉到恩贾梅纳的运输，从克里比港到乍得的货运，还是乍得境内的货物运输，环球商业与供应有限公司（GBS） 都能为您提供覆盖供应链各个环节的专业服务，从港口到乍得境内任意最终目的地，价格具有竞争力，服务品质卓越。',
   },
 };
 

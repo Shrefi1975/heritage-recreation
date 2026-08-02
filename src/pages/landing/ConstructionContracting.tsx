@@ -166,7 +166,7 @@ const content: Record<LandingLang, Content> = {
     seoText: 'Global Business & Supplies (GBS) propose des services de construction et de BTP au Tchad pour les institutions gouvernementales, les entreprises privées, les organisations internationales et les projets d\'investissement, en réalisant des projets de construction et d\'infrastructure selon les plus hauts standards de qualité et de sécurité. Nous proposons des solutions intégrées comprenant la construction de bâtiments résidentiels, commerciaux et administratifs, des travaux d\'infrastructure, de voirie, de béton, des finitions, de la rénovation, de la maintenance, des travaux d\'électricité et de plomberie, l\'installation de systèmes d\'énergie solaire, ainsi que la fourniture de matériaux de construction et la location d\'équipements lourds nécessaires pour réaliser le projet efficacement. Si vous recherchez une entreprise de BTP au Tchad, une entreprise de construction à N\'Djamena, ou la réalisation de projets d\'infrastructure, Global Business & Supplies (GBS) offre des solutions professionnelles répondant aux besoins des secteurs public et privé, avec un engagement sur la qualité, les délais et des prix compétitifs.',
   },
   zh: {
-    metaTitle: '乍得建筑与承包公司 | 项目与基础设施 — Global Business & Supplies',
+    metaTitle: '乍得建筑与承包公司 | 项目与基础设施 — 环球商业与供应有限公司（GBS）',
     metaDescription: '乍得建筑与承包服务：住宅、商业和行政建筑，基础设施与道路，装修与翻新，电力、管道与太阳能，服务遍及恩贾梅纳和阿贝歇。',
     badge: '综合承包 · 基础设施',
     h1: '我们以高品质和守时的方式在乍得为您建造项目',
@@ -207,8 +207,8 @@ const content: Record<LandingLang, Content> = {
     ],
     finalTitle: '与言出必行的合作伙伴一起启动您的项目',
     finalText: '联系我们，讨论您的项目并获取详细的技术与财务报价。',
-    seoTitle: '乍得建筑与承包服务 – Global Business & Supplies (GBS)',
-    seoText: 'Global Business & Supplies (GBS) 为政府机构、私营企业、国际组织及投资项目提供乍得的建筑与承包服务，按照最高质量与安全标准执行建筑及基础设施项目。我们提供一站式综合解决方案，包括住宅、商业和行政建筑施工，基础设施、道路及混凝土工程，装修、翻新及维护，电力与管道工程，太阳能系统安装，以及高效完成项目所需的建筑材料供应和重型设备租赁。如果您正在寻找乍得的承包公司、恩贾梅纳的建筑公司，或基础设施项目的执行方，Global Business & Supplies (GBS) 提供专业解决方案，满足公共和私营部门的需求，坚持质量、工期与具竞争力的价格。',
+    seoTitle: '乍得建筑与承包服务 – 环球商业与供应有限公司（GBS）',
+    seoText: '环球商业与供应有限公司（GBS） 为政府机构、私营企业、国际组织及投资项目提供乍得的建筑与承包服务，按照最高质量与安全标准执行建筑及基础设施项目。我们提供一站式综合解决方案，包括住宅、商业和行政建筑施工，基础设施、道路及混凝土工程，装修、翻新及维护，电力与管道工程，太阳能系统安装，以及高效完成项目所需的建筑材料供应和重型设备租赁。如果您正在寻找乍得的承包公司、恩贾梅纳的建筑公司，或基础设施项目的执行方，环球商业与供应有限公司（GBS） 提供专业解决方案，满足公共和私营部门的需求，坚持质量、工期与具竞争力的价格。',
   },
 };
 

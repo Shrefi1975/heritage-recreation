@@ -166,7 +166,7 @@ const content: Record<LandingLang, Content> = {
     seoText: "Global Business & Supplies (GBS) fournit des services de fourniture et d'installation de caméras de vidéosurveillance et de systèmes de sécurité au Tchad pour les entreprises, les institutions gouvernementales, les organisations internationales, ainsi que les résidences et projets privés, à N'Djamena, Abéché et dans toutes les régions du Tchad. Nos services incluent des caméras intérieures et extérieures haute définition, des dispositifs d'enregistrement et de stockage, des systèmes d'alarme anti-intrusion et de détection d'incendie, des systèmes de contrôle d'accès et de gestion des présences, des solutions de surveillance à distance via mobile, ainsi que des travaux de câblage réseau et des systèmes d'alimentation de secours. Que vous recherchiez l'installation de caméras de surveillance au Tchad, un système de protection pour votre bureau, entrepôt ou domicile à N'Djamena, ou des solutions de sécurité intégrées pour des sites de projets, Global Business & Supplies (GBS) vous propose des équipements authentiques, une installation technique précise, ainsi qu'une maintenance et un support technique locaux, à des prix compétitifs et avec une qualité fiable.",
   },
   zh: {
-    metaTitle: '乍得监控摄像头与安防系统 | 安装与维护 — Global Business & Supplies',
+    metaTitle: '乍得监控摄像头与安防系统 | 安装与维护 — 环球商业与供应有限公司（GBS）',
     metaDescription: '在恩贾梅纳及乍得全境提供监控摄像头、报警系统与门禁系统的供应与安装服务，支持通过手机远程监控及定期维护。',
     badge: '一体化安防与保护系统',
     h1: '全天候守护您的场所……乍得专业监控摄像头与安防系统',
@@ -207,8 +207,8 @@ const content: Record<LandingLang, Content> = {
     ],
     finalTitle: '一通电话，开启您场所的安全保障',
     finalText: '立即联系我们，预约免费现场勘察，获取适合您的监控系统详细报价。',
-    seoTitle: '乍得监控摄像头与安防系统 – Global Business & Supplies (GBS)',
-    seoText: 'Global Business & Supplies (GBS) 在乍得为企业、政府机构、国际组织以及私人住宅与项目提供监控摄像头及安防系统的供应与安装服务，覆盖恩贾梅纳、阿贝歇及乍得全境。我们的服务包括高清室内外摄像头、录像与存储设备、防盗与火灾报警系统、门禁及考勤管理系统、移动端远程监控解决方案，以及网络布线与备用电源系统。如果您正在乍得寻找监控摄像头安装服务，或为恩贾梅纳的办公室、仓库或住宅寻求防护系统，又或是为项目工地寻求一体化安防解决方案，Global Business & Supplies (GBS) 将为您提供原装设备、精准的工程安装，以及本地维护与技术支持，价格具有竞争力，品质值得信赖。',
+    seoTitle: '乍得监控摄像头与安防系统 – 环球商业与供应有限公司（GBS）',
+    seoText: '环球商业与供应有限公司（GBS） 在乍得为企业、政府机构、国际组织以及私人住宅与项目提供监控摄像头及安防系统的供应与安装服务，覆盖恩贾梅纳、阿贝歇及乍得全境。我们的服务包括高清室内外摄像头、录像与存储设备、防盗与火灾报警系统、门禁及考勤管理系统、移动端远程监控解决方案，以及网络布线与备用电源系统。如果您正在乍得寻找监控摄像头安装服务，或为恩贾梅纳的办公室、仓库或住宅寻求防护系统，又或是为项目工地寻求一体化安防解决方案，环球商业与供应有限公司（GBS） 将为您提供原装设备、精准的工程安装，以及本地维护与技术支持，价格具有竞争力，品质值得信赖。',
   },
 };
 

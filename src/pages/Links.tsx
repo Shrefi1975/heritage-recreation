@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Phone, Home, Car, Truck, Construction, ShieldCheck, Wrench, Globe, MapPin, Smartphone } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Phone, Home, Car, Truck, Construction, ShieldCheck, Wrench, Globe, MapPin, Smartphone, X } from 'lucide-react';
 import logo from '@/assets/logo-new.png';
 import heroBg from '@/assets/landing/links-hero-dark.jpg';
 
@@ -47,7 +47,18 @@ const SmartLink: React.FC<{ to: string; className?: string; children: React.Reac
     </Link>
   );
 
+type LinkItem = (typeof links)[number];
+
 const Links: React.FC = () => {
+  const [active, setActive] = React.useState<LinkItem | null>(null);
+
+  React.useEffect(() => {
+    document.body.style.overflow = active ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [active]);
+
   return (
     <div dir="rtl" className="dark">
       <div className="min-h-screen bg-background text-foreground font-cairo">
@@ -127,9 +138,10 @@ const Links: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
               >
-                <SmartLink
-                  to={item.to}
-                  className="group flex items-center gap-4 rounded-2xl bg-card border border-border px-4 py-4 hover:-translate-y-1 hover:border-accent/50 hover:bg-muted/40 transition-all duration-300"
+                <button
+                  type="button"
+                  onClick={() => setActive(item)}
+                  className="w-full group flex items-center gap-4 rounded-2xl bg-card border border-border px-4 py-4 hover:-translate-y-1 hover:border-accent/50 hover:bg-muted/40 transition-all duration-300 text-start"
                 >
                   <span
                     className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
@@ -142,11 +154,11 @@ const Links: React.FC = () => {
                     <span className="block text-sm text-muted-foreground truncate">{item.desc}</span>
                   </span>
                   <span className="text-muted-foreground transition-all group-hover:-translate-x-1" style={{ color: item.color }}>‹</span>
-                </SmartLink>
-
+                </button>
               </motion.div>
             ))}
           </div>
+
 
           {/* Main site */}
           <SmartLink
@@ -176,6 +188,43 @@ const Links: React.FC = () => {
             © {new Date().getFullYear()} Global Business &amp; Supplies
           </p>
         </main>
+
+        {/* In-page browser overlay (no visible URLs) */}
+        <AnimatePresence>
+          {active && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 bg-background flex flex-col"
+            >
+              <div className="flex items-center gap-3 px-4 py-3 border-b border-border bg-card">
+                <button
+                  type="button"
+                  onClick={() => setActive(null)}
+                  aria-label="إغلاق"
+                  className="w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+                <span className="flex-1 min-w-0 font-bold truncate">{active.title}</span>
+                <span
+                  className="shrink-0 w-9 h-9 rounded-xl flex items-center justify-center"
+                  style={{ backgroundColor: `${active.color}22`, color: active.color }}
+                >
+                  <active.icon className="h-5 w-5" />
+                </span>
+              </div>
+              <iframe
+                key={active.to}
+                src={STANDALONE ? `${SITE_URL}${active.to}` : active.to}
+                title={active.title}
+                className="flex-1 w-full border-0 bg-background"
+                loading="lazy"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

@@ -315,15 +315,9 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
           </div>
 
           {/* COMPANY CARD */}
-          <div className="mt-14 mx-auto max-w-xl rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md p-6 md:p-7 text-center shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
-            <img
-              src={gbsLogo}
-              alt="Global Business & Supplies"
-              className="h-10 md:h-12 w-auto object-contain mx-auto mb-4 brightness-0 invert opacity-90"
-              loading="lazy"
-            />
+          <div className="mt-14 mx-auto max-w-xl rounded-3xl border border-white/15 p-6 md:p-7 text-center">
             <p className="text-white font-extrabold tracking-wide text-base md:text-lg">
-              Global Business &amp; Supplies
+              {ui.companyName}
             </p>
             <div className="mt-2 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
               <span className="inline-flex items-center gap-1.5 text-white/70">

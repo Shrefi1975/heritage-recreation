@@ -170,7 +170,7 @@ const content: Record<LandingLang, Content> = {
     seoText: 'Global Business & Supplies (GBS) propose des services de location d\'engins lourds au Tchad pour soutenir les projets de construction, de voirie, d\'exploitation minière, d\'infrastructures ainsi que les secteurs public et privé, en fournissant des équipements modernes et des opérateurs expérimentés pour répondre aux besoins des projets partout au Tchad. Nos services incluent la location de divers types d\'engins et machines de construction, notamment : les excavatrices, les chargeuses sur pneus, les niveleuses, les compacteurs et rouleaux, les camions-bennes, les camions porte-engins (lowbed), les bulldozers, les grues, les chariots élévateurs et équipements de manutention, ainsi que les équipements de terrassement et de nivellement. Que vous cherchiez à louer une excavatrice au Tchad, une chargeuse, une niveleuse, un camion-benne ou un camion lowbed pour le transport d\'engins lourds, Global Business & Supplies (GBS) propose des solutions fiables à des prix compétitifs, avec des services flexibles adaptés aux projets de courte et longue durée à N\'Djamena, Abéché et dans toutes les régions du Tchad.',
   },
   zh: {
-    metaTitle: '乍得重型设备租赁 | 挖掘机与起重机 — Global Business & Supplies',
+    metaTitle: '乍得重型设备租赁 | 挖掘机与起重机 — 环球商业与供应有限公司（GBS）',
     metaDescription: '乍得重型设备租赁：挖掘机、推土机、起重机、自卸卡车和发电机，配备持证操作员、维护保养和技术支持，提供日租至长期合同。',
     badge: '建筑、石油与矿业项目',
     h1: '不间断的作业动力……为您在乍得的项目准备好重型设备',
@@ -211,8 +211,8 @@ const content: Record<LandingLang, Content> = {
     ],
     finalTitle: '不要让设备停工拖延您的项目',
     finalText: '请将工作范围和工期发送给我们，我们将在24小时内回复部署计划和详细报价。',
-    seoTitle: '乍得重型设备租赁 – Global Business & Supplies (GBS)',
-    seoText: 'Global Business & Supplies (GBS) 在乍得提供重型设备租赁服务，支持建筑、道路、矿业、基础设施以及公共和私营部门项目，提供现代化设备和经验丰富的操作员，以满足乍得各地项目的需求。我们的服务包括租赁各类建筑设备和机械，例如：挖掘机、轮式装载机、平地机、压实机与压路机、自卸卡车、低平板运输车、推土机、起重机、叉车及物料搬运设备，以及挖掘、平整和土方设备。无论您是在乍得寻找挖掘机租赁、装载机租赁、平地机、自卸卡车，还是用于运输重型设备的低平板运输车，Global Business & Supplies (GBS) 都能以有竞争力的价格提供可靠的解决方案，灵活的服务适用于恩贾梅纳、阿贝歇及乍得各地区的短期和长期项目。',
+    seoTitle: '乍得重型设备租赁 – 环球商业与供应有限公司（GBS）',
+    seoText: '环球商业与供应有限公司（GBS） 在乍得提供重型设备租赁服务，支持建筑、道路、矿业、基础设施以及公共和私营部门项目，提供现代化设备和经验丰富的操作员，以满足乍得各地项目的需求。我们的服务包括租赁各类建筑设备和机械，例如：挖掘机、轮式装载机、平地机、压实机与压路机、自卸卡车、低平板运输车、推土机、起重机、叉车及物料搬运设备，以及挖掘、平整和土方设备。无论您是在乍得寻找挖掘机租赁、装载机租赁、平地机、自卸卡车，还是用于运输重型设备的低平板运输车，环球商业与供应有限公司（GBS） 都能以有竞争力的价格提供可靠的解决方案，灵活的服务适用于恩贾梅纳、阿贝歇及乍得各地区的短期和长期项目。',
   },
 };
 

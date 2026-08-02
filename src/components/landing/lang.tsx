@@ -42,6 +42,7 @@ export const landingUI: Record<LandingLang, {
   location: string;
   emailLabel: string;
   callLabel: string;
+  companyName: string;
 }> = {
   ar: {
     contactForm: 'نموذج التواصل',
@@ -53,6 +54,7 @@ export const landingUI: Record<LandingLang, {
     location: 'نجامينا، تشاد',
     emailLabel: 'البريد الإلكتروني',
     callLabel: 'اتصل بنا',
+    companyName: 'Global Business & Supplies',
   },
   en: {
     contactForm: 'Contact form',
@@ -64,6 +66,7 @@ export const landingUI: Record<LandingLang, {
     location: "N'Djamena, Chad",
     emailLabel: 'Email',
     callLabel: 'Call us',
+    companyName: 'Global Business & Supplies',
   },
   fr: {
     contactForm: 'Formulaire de contact',
@@ -75,6 +78,7 @@ export const landingUI: Record<LandingLang, {
     location: "N'Djamena, Tchad",
     emailLabel: 'E-mail',
     callLabel: 'Appelez-nous',
+    companyName: 'Global Business & Supplies',
   },
   zh: {
     contactForm: '联系表单',
@@ -86,6 +90,7 @@ export const landingUI: Record<LandingLang, {
     location: '乍得，恩贾梅纳',
     emailLabel: '电子邮箱',
     callLabel: '致电我们',
+    companyName: '环球商业与供应有限公司 (GBS)',
   },
 };
 
