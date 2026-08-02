@@ -170,7 +170,7 @@ const content: Record<LandingLang, Content> = {
     seoText: "Global Business & Supplies (GBS) propose des services de location de voiture avec chauffeur au Tchad pour les particuliers, les entreprises, les organisations internationales et les institutions gouvernementales, avec une large couverture incluant N'Djamena, Abéché, les zones frontalières avec le Soudan, le sud du Tchad et diverses régions du pays. Nous proposons une flotte diversifiée de véhicules 4x4, de berlines, de pick-up et de minibus, tous avec des chauffeurs professionnels expérimentés, pour répondre aux besoins des voyages officiels, des projets, des missions humanitaires, des visites d'affaires et des déplacements au sein des villes et entre les différentes régions du Tchad. Que vous recherchiez une location de voiture avec chauffeur au Tchad, la location d'une voiture avec chauffeur à N'Djamena, la location d'une voiture avec chauffeur à Abéché, ou un service de transport professionnel dans le sud du Tchad ou près de la frontière tchado-soudanaise, Global Business & Supplies (GBS) vous garantit un service fiable, des chauffeurs qualifiés et des tarifs compétitifs, pour un voyage sûr et confortable partout au Tchad.",
   },
   zh: {
-    metaTitle: '乍得租车服务 | 配备司机的现代化车队 — Global Business & Supplies',
+    metaTitle: '乍得租车服务 | 配备司机的现代化车队 — 环球商业与供应有限公司（GBS）',
     metaDescription: '在恩贾梅纳及乍得全境提供轿车、四驱越野车和小型巴士租赁服务，可选配或不配司机，全面保险，支持日租、月租及长期合约。',
     badge: '恩贾梅纳及乍得全境',
     h1: '安心出行……乍得境内数小时即可就绪的现代化车队',
@@ -211,8 +211,8 @@ const content: Record<LandingLang, Content> = {
     ],
     finalTitle: '车辆已就绪……只需告知您的用车时间',
     finalText: '立即联系我们，几分钟内获取报价，月租及长期合约享有特别优惠。',
-    seoTitle: '乍得配司机租车服务 – Global Business & Supplies (GBS)',
-    seoText: 'Global Business & Supplies（GBS）为个人、企业、国际机构及政府部门提供乍得境内配司机租车服务，覆盖范围广泛，包括恩贾梅纳、阿贝歇、与苏丹接壤的边境地区，以及乍得南部和全国各地。我们提供多样化的车队，包括四驱越野车（4×4）、轿车、皮卡及小型巴士，均配备经验丰富的专业司机，满足公务出行、项目实施、人道主义任务、商务访问以及乍得境内城市间往来的各类需求。无论您是在寻找乍得配司机租车服务、恩贾梅纳配司机租车、阿贝歇配司机租车服务，还是乍得南部或乍得-苏丹边境附近的专业运输服务，Global Business & Supplies（GBS）都能为您提供可靠的服务、合格的司机及具竞争力的价格，确保您在乍得全境的出行安全舒适。',
+    seoTitle: '乍得配司机租车服务 – 环球商业与供应有限公司（GBS）',
+    seoText: '环球商业与供应有限公司（GBS）为个人、企业、国际机构及政府部门提供乍得境内配司机租车服务，覆盖范围广泛，包括恩贾梅纳、阿贝歇、与苏丹接壤的边境地区，以及乍得南部和全国各地。我们提供多样化的车队，包括四驱越野车（4×4）、轿车、皮卡及小型巴士，均配备经验丰富的专业司机，满足公务出行、项目实施、人道主义任务、商务访问以及乍得境内城市间往来的各类需求。无论您是在寻找乍得配司机租车服务、恩贾梅纳配司机租车、阿贝歇配司机租车服务，还是乍得南部或乍得-苏丹边境附近的专业运输服务，环球商业与供应有限公司（GBS）都能为您提供可靠的服务、合格的司机及具竞争力的价格，确保您在乍得全境的出行安全舒适。',
   },
 };
 
