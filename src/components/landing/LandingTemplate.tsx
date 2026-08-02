@@ -41,19 +41,23 @@ export interface LandingTemplateProps {
   contactHref?: string;
   seoTitle: string;
   seoText: string;
+  lang?: LandingLang;
+  onLangChange?: (l: LandingLang) => void;
 }
 
 const PHONE = '23565555504';
 const TEL = 'tel:+23565555504';
+const EMAIL = 'info@globizsupplies.com';
 const wa = (msg: string) => `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
-const WA_FLOAT = wa(
-  'مرحباً! لقد ضغطت على أيقونة الواتساب من موقعكم الإلكتروني (Global Business & Supplies). أرغب في التواصل معكم ومعرفة المزيد عن خدماتكم. شكراً لكم!'
-);
 
 const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
-  const WA = wa(
-    `مرحباً! لقد زرت صفحة "${p.badge}" على موقع Global Business & Supplies (GBS)، وأرغب في الاستفسار عن الخدمة والحصول على عرض سعر. شكراً لكم!`
-  );
+  const lang: LandingLang = p.lang ?? 'ar';
+  const ui = landingUI[lang];
+  const dir = dirOf(lang);
+  const isRtl = dir === 'rtl';
+  const Arrow = isRtl ? ArrowLeft : ArrowRight;
+  const WA = wa(ui.waPage(p.badge));
+  const WA_FLOAT = wa(ui.waFloat);
 
   React.useEffect(() => {
     document.title = p.metaTitle;
@@ -64,10 +68,13 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
       document.head.appendChild(meta);
     }
     meta.setAttribute('content', p.metaDescription);
-  }, [p.metaTitle, p.metaDescription]);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = dir;
+  }, [p.metaTitle, p.metaDescription, lang, dir]);
 
   return (
-    <div dir="rtl" lang="ar" className="min-h-screen bg-background font-cairo">
+    <div dir={dir} lang={lang} className="min-h-screen bg-background font-cairo">
+
 
       {/* HERO */}
       <section className="relative overflow-hidden">
