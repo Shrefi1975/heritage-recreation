@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Phone, MessageCircle, ArrowLeft, CheckCircle2, Sparkles, type LucideIcon } from 'lucide-react';
+import { Phone, MessageCircle, ArrowLeft, ArrowRight, CheckCircle2, Sparkles, Mail, MapPin, type LucideIcon } from 'lucide-react';
 import gbsLogo from '@/assets/logo-new.png';
+import { LandingLangSwitcher, landingUI, dirOf, type LandingLang } from './lang';
+
 
 export interface LandingBenefit {
   icon: LucideIcon;
@@ -39,19 +41,23 @@ export interface LandingTemplateProps {
   contactHref?: string;
   seoTitle: string;
   seoText: string;
+  lang?: LandingLang;
+  onLangChange?: (l: LandingLang) => void;
 }
 
 const PHONE = '23565555504';
 const TEL = 'tel:+23565555504';
+const EMAIL = 'info@globizsupplies.com';
 const wa = (msg: string) => `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
-const WA_FLOAT = wa(
-  'مرحباً! لقد ضغطت على أيقونة الواتساب من موقعكم الإلكتروني (Global Business & Supplies). أرغب في التواصل معكم ومعرفة المزيد عن خدماتكم. شكراً لكم!'
-);
 
 const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
-  const WA = wa(
-    `مرحباً! لقد زرت صفحة "${p.badge}" على موقع Global Business & Supplies (GBS)، وأرغب في الاستفسار عن الخدمة والحصول على عرض سعر. شكراً لكم!`
-  );
+  const lang: LandingLang = p.lang ?? 'ar';
+  const ui = landingUI[lang];
+  const dir = dirOf(lang);
+  const isRtl = dir === 'rtl';
+  const Arrow = isRtl ? ArrowLeft : ArrowRight;
+  const WA = wa(ui.waPage(p.badge));
+  const WA_FLOAT = wa(ui.waFloat);
 
   React.useEffect(() => {
     document.title = p.metaTitle;
@@ -62,10 +68,13 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
       document.head.appendChild(meta);
     }
     meta.setAttribute('content', p.metaDescription);
-  }, [p.metaTitle, p.metaDescription]);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = dir;
+  }, [p.metaTitle, p.metaDescription, lang, dir]);
 
   return (
-    <div dir="rtl" lang="ar" className="min-h-screen bg-background font-cairo">
+    <div dir={dir} lang={lang} className="min-h-screen bg-background font-cairo">
+
 
       {/* HERO */}
       <section className="relative overflow-hidden">
@@ -77,17 +86,23 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-primary/70 via-primary/45 to-primary/15" />
+          <div className={`absolute inset-0 bg-gradient-to-${isRtl ? 'l' : 'r'} from-primary/70 via-primary/45 to-primary/15`} />
           <div className="absolute inset-0 bg-black/15" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-5 py-20 md:py-32">
+          <div className="flex justify-end mb-6">
+            {p.onLangChange && (
+              <LandingLangSwitcher lang={lang} setLang={p.onLangChange} />
+            )}
+          </div>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
+
             <div className="inline-flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-2xl px-5 py-3 mb-7 shadow-[0_12px_35px_-12px_rgba(0,0,0,0.6)]">
               <img
                 src={gbsLogo}
@@ -285,24 +300,57 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-bold text-white bg-white/10 border border-white/30 backdrop-blur-md hover:bg-white/20 transition-colors"
               >
-                نموذج التواصل
-                <ArrowLeft className="h-5 w-5" />
+                {ui.contactForm}
+                <Arrow className="h-5 w-5" />
               </a>
             ) : (
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-4 font-bold text-white bg-white/10 border border-white/30 backdrop-blur-md hover:bg-white/20 transition-colors"
               >
-                نموذج التواصل
-                <ArrowLeft className="h-5 w-5" />
+                {ui.contactForm}
+                <Arrow className="h-5 w-5" />
               </Link>
             )}
           </div>
-          <p className="text-white/50 text-xs mt-10">
-            Global Business &amp; Supplies — نجامينا، تشاد
-          </p>
+
+          {/* COMPANY CARD */}
+          <div className="mt-14 mx-auto max-w-xl rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md p-6 md:p-7 text-center shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]">
+            <img
+              src={gbsLogo}
+              alt="Global Business & Supplies"
+              className="h-10 md:h-12 w-auto object-contain mx-auto mb-4 brightness-0 invert opacity-90"
+              loading="lazy"
+            />
+            <p className="text-white font-extrabold tracking-wide text-base md:text-lg">
+              Global Business &amp; Supplies
+            </p>
+            <div className="mt-2 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+              <span className="inline-flex items-center gap-1.5 text-white/70">
+                <MapPin className="h-4 w-4 text-accent shrink-0" />
+                {ui.location}
+              </span>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-accent transition-colors break-all"
+                dir="ltr"
+              >
+                <Mail className="h-4 w-4 text-accent shrink-0" />
+                {EMAIL}
+              </a>
+              <a
+                href={TEL}
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-accent transition-colors"
+                dir="ltr"
+              >
+                <Phone className="h-4 w-4 text-accent shrink-0" />
+                +235-65 55 55 04
+              </a>
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* WHATSAPP FLOATING BUTTON */}
       <a
