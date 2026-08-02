@@ -201,7 +201,7 @@ const content: Record<LandingLang, Content> = {
     stepsTitle: '我们的合作流程',
     steps: [
       { title: '调研', text: '实地考察，了解项目需求与规格。' },
-      { title: '技术与financial报价', text: '清晰的工程量、价格与时间表，绝无意外。' },
+      { title: '技术与财务报价', text: '清晰的工程量、价格与时间表，绝无意外。' },
       { title: '施工执行', text: '工程团队与设备进驻现场，持续进行质量把控。' },
       { title: '交付与保修', text: '文件化的最终交付，附带保修与维护期。' },
     ],
