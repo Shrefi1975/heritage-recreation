@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Phone, MessageCircle, ArrowLeft, CheckCircle2, Sparkles, type LucideIcon } from 'lucide-react';
+import { Phone, MessageCircle, ArrowLeft, ArrowRight, CheckCircle2, Sparkles, Mail, MapPin, type LucideIcon } from 'lucide-react';
 import gbsLogo from '@/assets/logo-new.png';
+import { LandingLangSwitcher, landingUI, dirOf, type LandingLang } from './lang';
+
 
 export interface LandingBenefit {
   icon: LucideIcon;
