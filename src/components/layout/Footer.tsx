@@ -20,6 +20,7 @@ const Footer: React.FC = () => {
   // Match Header navigation exactly
   const quickLinks = [
     { path: '/', label: tr('الرئيسية', 'Home', '首页', 'Accueil') },
+    { path: '/about', label: tr('من نحن', 'About Us', '关于我们', 'À propos') },
     { path: '/general-trade', label: tr('التجارة العامة والاستيراد والتصدير', 'General Trade, Import & Export', '综合贸易、进口与出口', 'Commerce Général, Import & Export') },
     { path: '/supplies', label: tr('التوريدات', 'Supplies', '供应', 'Approvisionnements') },
     { path: '/services', label: tr('الخدمات', 'Services', '服务', 'Services') },
