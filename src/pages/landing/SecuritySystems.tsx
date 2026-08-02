@@ -225,6 +225,7 @@ const SecuritySystemsLanding: React.FC<{ contactHref?: string }> = ({ contactHre
       contactHref={contactHref}
       lang={lang}
       onLangChange={setLang}
+      pageKey="security"
     />
   );
 };

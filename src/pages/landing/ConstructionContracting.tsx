@@ -225,6 +225,7 @@ const ConstructionContractingLanding: React.FC<{ contactHref?: string }> = ({ co
       contactHref={contactHref}
       lang={lang}
       onLangChange={setLang}
+      pageKey="construction"
     />
   );
 };
