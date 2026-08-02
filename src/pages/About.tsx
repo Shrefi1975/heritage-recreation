@@ -25,17 +25,121 @@ const About: React.FC = () => {
   });
 
   const intro1 = pick(lang, {
-    ar: 'شركة GBS هي شركة متعددة الأنشطة متخصصة في التوريد، والتجارة، والخدمات، وتتخذ من تشاد مقرًا لها، حيث تدعم الشركات، والمنظمات غير الحكومية، ومشاريع التنمية، والمؤسسات العامة والخاصة من خلال توفير منتجات موثوقة، وخدمات تشغيلية، وحلول دعم ميداني.',
-    en: 'GBS is a multi-activity company specialized in supply, trade, and services, headquartered in Chad, supporting companies, NGOs, development projects, and public and private institutions through reliable products, operational services, and field support solutions.',
-    fr: "GBS est une société multi-activités spécialisée dans l'approvisionnement, le commerce et les services, basée au Tchad. Elle accompagne entreprises, ONG, projets de développement et institutions publiques et privées avec des produits fiables, des services opérationnels et des solutions de soutien sur le terrain.",
-    zh: 'GBS 是一家总部位于乍得的多元业务公司，专注于供应、贸易和服务，通过可靠的产品、运营服务和现场支持，支持企业、非政府组织、发展项目以及公共和私营机构。',
+    ar: 'Global Business & Supplies (GBS) هي شركة متخصصة في التجارة العامة، والاستيراد والتصدير، والتوريد، والخدمات اللوجستية، والبناء والمقاولات، والحلول التقنية في تشاد. يقع مقر الشركة في أنجمينا، وتقدم خدماتها للقطاعين الحكومي والخاص، والمنظمات الدولية، والمنظمات غير الحكومية، والشركات المحلية والعالمية، مع تغطية تمتد إلى تشاد ومنطقة وسط أفريقيا.',
+    en: 'Global Business & Supplies (GBS) is a company specialized in general trade, import and export, supply, logistics, construction and contracting, and technology solutions in Chad. Headquartered in N\'Djamena, GBS serves the public and private sectors, international organizations, NGOs, and local and global companies, with coverage extending across Chad and the Central Africa region.',
+    fr: "Global Business & Supplies (GBS) est une société spécialisée dans le commerce général, l'import-export, l'approvisionnement, la logistique, la construction et les solutions technologiques au Tchad. Basée à N'Djamena, elle sert les secteurs public et privé, les organisations internationales, les ONG et les entreprises locales et mondiales, avec une couverture au Tchad et en Afrique centrale.",
+    zh: 'Global Business & Supplies (GBS) 是一家专注于乍得综合贸易、进出口、供应、物流、建筑承包与技术解决方案的公司。公司总部位于恩贾梅纳，为公共和私营部门、国际组织、非政府组织以及本地和全球企业提供服务，业务覆盖乍得及中非地区。',
   });
 
   const intro2 = pick(lang, {
-    ar: 'تعمل GBS في مختلف أنحاء تشاد، ومن خلال شبكة من الشركاء المحليين والإقليميين والدوليين، لدعم سلاسل الإمداد، والعمليات اللوجستية، ومشاريع البنية التحتية، والأنشطة التجارية في بيئات تشغيلية متنوعة.',
-    en: 'GBS operates across Chad through a network of local, regional, and international partners — supporting supply chains, logistics operations, infrastructure projects, and commercial activities in diverse operational environments.',
-    fr: "GBS opère à travers le Tchad via un réseau de partenaires locaux, régionaux et internationaux — soutenant les chaînes d'approvisionnement, la logistique, les projets d'infrastructure et les activités commerciales.",
-    zh: 'GBS 在乍得各地通过本地、地区和国际合作伙伴网络运营，支持供应链、物流、基础设施项目以及多元化的商业活动。',
+    ar: 'تعتمد الشركة على شبكة واسعة من الشراكات مع الشركات المحلية والإقليمية والدولية، مما يمكنها من توفير منتجات وخدمات عالية الجودة وفق المعايير العالمية. كما تعمل Global Business & Supplies كشريك محلي للشركات العالمية الراغبة في دخول السوق التشادية والتوسع في أسواق وسط أفريقيا، من خلال خدمات التمثيل التجاري، وتطوير الأعمال، والتسويق، والتوزيع، والخدمات اللوجستية، وإدارة سلسلة الإمداد، وتنفيذ المشاريع. وترحب الشركة بالتعاون مع المصنعين والموردين والشركات الدولية التي تقدم منتجات وخدمات عالية الجودة، وتسعى إلى تمثيلها وتطوير أعمالها وفتح أسواق جديدة لها في تشاد ووسط أفريقيا.',
+    en: 'The company relies on a broad network of partnerships with local, regional, and international firms, enabling it to deliver high-quality products and services to global standards. GBS also acts as the local partner for international companies entering the Chadian market and expanding into Central Africa — through commercial representation, business development, marketing, distribution, logistics, supply chain management, and project execution. We welcome cooperation with manufacturers, suppliers, and international companies, and seek to represent them and open new markets in Chad and Central Africa.',
+    fr: "L'entreprise s'appuie sur un large réseau de partenariats locaux, régionaux et internationaux, lui permettant de fournir des produits et services de haute qualité aux standards internationaux. GBS agit aussi comme partenaire local des sociétés internationales souhaitant entrer sur le marché tchadien et s'étendre en Afrique centrale : représentation commerciale, développement des affaires, marketing, distribution, logistique, gestion de la chaîne d'approvisionnement et exécution de projets.",
+    zh: '公司依托与本地、地区和国际企业的广泛合作网络，能够按照国际标准提供高质量的产品与服务。GBS 还作为国际企业进入乍得市场并拓展中非市场的本地合作伙伴，提供商业代理、业务拓展、市场营销、分销、物流、供应链管理及项目执行等服务，并欢迎与优质制造商和供应商合作，代理其业务并开拓新市场。',
+  });
+
+  const scopeTitle = pick(lang, { ar: 'مجالات عملنا', en: 'Our Areas of Work', fr: "Nos domaines d'activité", zh: '我们的业务领域' });
+  const scopeLead = pick(lang, {
+    ar: 'تشمل خدمات Global Business & Supplies مجموعة واسعة من القطاعات، منها:',
+    en: 'GBS services cover a wide range of sectors, including:',
+    fr: 'Les services de GBS couvrent un large éventail de secteurs, dont :',
+    zh: 'GBS 的服务涵盖广泛的领域，包括：',
+  });
+  const scopeItems: string[] = pick(lang, {
+    ar: [
+      'التجارة العامة والاستيراد والتصدير لمختلف المنتجات والسلع.',
+      'توريد السلع الاستهلاكية سريعة التداول (FMCG)، والمنتجات الغذائية، والمواد المنزلية، ومنتجات العناية الشخصية.',
+      'توريد المعدات الطبية، والأدوية، والمستهلكات الطبية، والمستلزمات المخبرية.',
+      'توريد منتجات الطاقة الشمسية وأنظمة الطاقة المتجددة.',
+      'توريد المعدات الزراعية، والبيطرية، والصناعية، ومواد البناء، وقطع الغيار، والأثاث، والمعدات المكتبية والفندقية والتعليمية.',
+      'البناء والمقاولات، بما يشمل تنفيذ مشاريع البنية التحتية، والإنشاءات، والترميم، والصيانة، وأعمال التشطيب، وتوريد مواد البناء والمعدات.',
+    ],
+    en: [
+      'General trade, import and export of various products and goods.',
+      'Supply of FMCG, food products, household materials, and personal care products.',
+      'Supply of medical equipment, pharmaceuticals, medical consumables, and laboratory supplies.',
+      'Supply of solar products and renewable energy systems.',
+      'Supply of agricultural, veterinary, and industrial equipment, building materials, spare parts, furniture, and office, hotel, and educational equipment.',
+      'Construction and contracting, including infrastructure projects, building, renovation, maintenance, finishing works, and supply of construction materials and equipment.',
+    ],
+    fr: [
+      'Commerce général, import et export de divers produits et marchandises.',
+      'Fourniture de produits de grande consommation (FMCG), alimentaires, ménagers et de soins personnels.',
+      'Fourniture d\'équipements médicaux, de médicaments, de consommables médicaux et de matériel de laboratoire.',
+      'Fourniture de produits solaires et de systèmes d\'énergie renouvelable.',
+      'Fourniture d\'équipements agricoles, vétérinaires et industriels, matériaux de construction, pièces détachées, mobilier et équipements de bureau, hôteliers et éducatifs.',
+      'Construction et travaux : infrastructures, bâtiment, rénovation, maintenance, finitions et fourniture de matériaux et d\'équipements.',
+    ],
+    zh: [
+      '各类产品与商品的综合贸易及进出口。',
+      '快速消费品（FMCG）、食品、家居用品和个人护理产品的供应。',
+      '医疗设备、药品、医用耗材和实验室用品的供应。',
+      '太阳能产品与可再生能源系统的供应。',
+      '农业、兽医和工业设备、建筑材料、备件、家具以及办公、酒店和教育设备的供应。',
+      '建筑与工程承包，包括基础设施项目、施工、翻新、维护、装修以及建材和设备供应。',
+    ],
+  } as any);
+
+  const servicesLead = pick(lang, {
+    ar: 'كما تقدم الشركة مجموعة متكاملة من الخدمات، تشمل:',
+    en: 'The company also offers an integrated set of services, including:',
+    fr: 'La société propose également un ensemble intégré de services :',
+    zh: '公司还提供一整套综合服务，包括：',
+  });
+  const serviceItems: string[] = pick(lang, {
+    ar: [
+      'النقل والشحن من دوالا وميناء كريبي في الكاميرون إلى أنجمينا، ثم إلى جميع المدن والمناطق داخل تشاد، مع خدمات التخليص الجمركي والنقل الداخلي.',
+      'تأجير السيارات مع سائق في مختلف أنحاء تشاد.',
+      'إيجار المنازل، والفلل، والشقق المفروشة وغير المفروشة في أنجمينا وأبشي.',
+      'تأجير المعدات الثقيلة، بما في ذلك الحفارات، واللودرات، والجريدرات، والمداحل، والدامب تراك، واللوبيد تراك، وغيرها من معدات البناء والطرق.',
+    ],
+    en: [
+      'Transport and freight from Douala and Kribi port in Cameroon to N\'Djamena and all cities and regions inside Chad, with customs clearance and inland transport.',
+      'Car rental with driver across Chad.',
+      'Rental of houses, villas, and furnished or unfurnished apartments in N\'Djamena and Abéché.',
+      'Heavy equipment rental, including excavators, loaders, graders, rollers, dump trucks, lowbed trucks, and other construction and road equipment.',
+    ],
+    fr: [
+      "Transport et fret depuis Douala et le port de Kribi (Cameroun) vers N'Djamena et toutes les villes du Tchad, avec dédouanement et transport intérieur.",
+      'Location de voitures avec chauffeur partout au Tchad.',
+      "Location de maisons, villas et appartements meublés ou non à N'Djamena et Abéché.",
+      "Location d'engins lourds : excavatrices, chargeuses, niveleuses, compacteurs, camions bennes, porte-chars et autres engins de chantier.",
+    ],
+    zh: [
+      '从喀麦隆杜阿拉和克里比港到恩贾梅纳，以及乍得境内所有城市和地区的运输与货运，含清关和内陆运输。',
+      '乍得各地提供带司机的汽车租赁服务。',
+      '在恩贾梅纳和阿贝歇提供房屋、别墅及带家具或不带家具公寓的租赁。',
+      '重型设备租赁，包括挖掘机、装载机、平地机、压路机、自卸车、低平板车及其他建筑与道路设备。',
+    ],
+  } as any);
+
+  const itParagraph = pick(lang, {
+    ar: 'وفي مجال تقنية المعلومات والتحول الرقمي (IT & Digital Solutions)، تقدم الشركة حلولاً متكاملة تشمل تصميم وتطوير أنظمة إدارة المؤسسات (ERP)، والمواقع الإلكترونية، والتطبيقات، وتوريد معدات تقنية المعلومات، وأنظمة كاميرات المراقبة (CCTV)، وأنظمة التحكم في الدخول والخروج، وأنظمة مواقف السيارات الذكية، وحلول الشبكات والبنية التحتية الرقمية.',
+    en: 'In IT & Digital Solutions, GBS delivers integrated solutions including ERP design and development, websites and applications, IT equipment supply, CCTV systems, access control systems, smart parking systems, and network and digital infrastructure solutions.',
+    fr: "Dans le domaine IT & solutions digitales, GBS propose la conception et le développement d'ERP, de sites web et d'applications, la fourniture d'équipements informatiques, la vidéosurveillance (CCTV), le contrôle d'accès, les systèmes de parking intelligents et les infrastructures réseau.",
+    zh: '在信息技术与数字化解决方案领域，GBS 提供包括 ERP 系统设计开发、网站与应用程序、IT 设备供应、监控（CCTV）系统、门禁系统、智能停车系统以及网络与数字基础设施在内的一体化解决方案。',
+  });
+
+  const visionTitle = pick(lang, { ar: 'رؤيتنا', en: 'Our Vision', fr: 'Notre Vision', zh: '我们的愿景' });
+  const visionText = pick(lang, {
+    ar: 'أن نكون الشريك الرائد في التجارة، والاستيراد والتصدير، والخدمات اللوجستية، والبناء، والحلول التقنية في تشاد ووسط أفريقيا، وأن نساهم في ربط الشركات العالمية بالفرص الاستثمارية في المنطقة.',
+    en: 'To be the leading partner in trade, import and export, logistics, construction, and technology solutions in Chad and Central Africa, and to connect global companies with investment opportunities in the region.',
+    fr: "Être le partenaire de référence du commerce, de l'import-export, de la logistique, de la construction et des solutions technologiques au Tchad et en Afrique centrale, et relier les entreprises mondiales aux opportunités de la région.",
+    zh: '成为乍得及中非地区贸易、进出口、物流、建筑与技术解决方案的领先合作伙伴，并助力全球企业对接本地区的投资机会。',
+  });
+  const missionTitle = pick(lang, { ar: 'رسالتنا', en: 'Our Mission', fr: 'Notre Mission', zh: '我们的使命' });
+  const missionText = pick(lang, {
+    ar: 'تقديم منتجات وخدمات متكاملة بأعلى معايير الجودة، وبناء شراكات استراتيجية مع المصنعين والموردين العالميين، ودعم المؤسسات والشركات في تنفيذ مشاريعها، وتمكين الشركات الدولية من الوصول إلى السوق التشادية وأسواق وسط أفريقيا من خلال حلول احترافية وموثوقة.',
+    en: 'To deliver integrated products and services of the highest quality, build strategic partnerships with global manufacturers and suppliers, support institutions and companies in executing their projects, and enable international companies to access the Chadian and Central African markets through professional, reliable solutions.',
+    fr: "Fournir des produits et services intégrés de la plus haute qualité, bâtir des partenariats stratégiques avec les fabricants et fournisseurs mondiaux, accompagner les institutions et entreprises dans leurs projets et permettre aux sociétés internationales d'accéder aux marchés tchadien et d'Afrique centrale.",
+    zh: '以最高质量标准提供综合产品与服务，与全球制造商和供应商建立战略合作，支持机构与企业实施项目，并通过专业可靠的解决方案帮助国际企业进入乍得及中非市场。',
+  });
+
+  const finalParagraph = pick(lang, {
+    ar: 'بفضل خبرتها، وشبكة شركائها، ومعرفتها العميقة بالسوق المحلي، أصبحت Global Business & Supplies (GBS) شريكًا موثوقًا في التجارة العامة، والاستيراد والتصدير، والبناء والمقاولات، والخدمات اللوجستية، وتأجير السيارات، وتأجير العقارات، وتأجير المعدات الثقيلة، وتقنية المعلومات والتحول الرقمي، مع القدرة على تنفيذ المشاريع وتوفير المنتجات والخدمات في مختلف أنحاء تشاد ومنطقة وسط أفريقيا.',
+    en: 'Thanks to its experience, partner network, and deep knowledge of the local market, GBS has become a trusted partner in general trade, import and export, construction and contracting, logistics, car rental, property rental, heavy equipment rental, and IT and digital transformation — able to execute projects and deliver products and services across Chad and Central Africa.',
+    fr: "Grâce à son expérience, son réseau de partenaires et sa connaissance du marché local, GBS est devenu un partenaire de confiance dans le commerce général, l'import-export, la construction, la logistique, la location de voitures, l'immobilier, la location d'engins lourds et les solutions numériques, au Tchad et en Afrique centrale.",
+    zh: '凭借丰富经验、合作伙伴网络以及对本地市场的深刻理解，GBS 已成为综合贸易、进出口、建筑承包、物流、汽车租赁、房产租赁、重型设备租赁以及信息技术与数字化转型领域值得信赖的合作伙伴，能够在乍得及中非地区执行项目并提供产品与服务。',
   });
 
   const sectorsTitle = pick(lang, {
@@ -158,6 +262,49 @@ const About: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Scope of work */}
+        <section className="pb-12 lg:pb-16">
+          <div className="section-container">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{scopeTitle}</h2>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">{scopeLead}</p>
+              <ul className="space-y-3 mb-8">
+                {scopeItems.map((item, i) => (
+                  <li key={i} className="flex gap-3 text-base text-muted-foreground leading-relaxed">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">{servicesLead}</p>
+              <ul className="space-y-3 mb-8">
+                {serviceItems.map((item, i) => (
+                  <li key={i} className="flex gap-3 text-base text-muted-foreground leading-relaxed">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">{itParagraph}</p>
+
+              <div className="grid sm:grid-cols-2 gap-5 mt-10">
+                <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
+                  <h3 className="font-bold text-lg text-primary mb-2">{visionTitle}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{visionText}</p>
+                </div>
+                <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
+                  <h3 className="font-bold text-lg text-primary mb-2">{missionTitle}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{missionText}</p>
+                </div>
+              </div>
+
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mt-8">{finalParagraph}</p>
+            </div>
+          </div>
+        </section>
+
+
 
         {/* Six Sectors */}
         <section className="py-12 lg:py-16 bg-muted/30">

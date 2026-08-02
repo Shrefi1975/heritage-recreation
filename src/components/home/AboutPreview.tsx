@@ -16,16 +16,20 @@ const AboutPreview: React.FC = () => {
 
   const paragraphs: Record<string, string[]> = {
     ar: [
-      'شركة GBS هي شركة متعددة الأنشطة تعمل في مجالات: التجارة العامة، الاستيراد والتصدير، التوريدات، الخدمات، البناء والمقاولات، تكنولوجيا المعلومات، الطاقة الشمسية والمعدات الطبية والأدوية. مقرها في جمهورية تشاد مدينة نجامينا، وتدعم الشركات والمنظمات والمشاريع بحلول موثوقة عبر مجالاتها المختلفة وشراكاتها المحلية والدولية.',
+      'Global Business & Supplies (GBS) هي شركة متخصصة في التجارة العامة، والاستيراد والتصدير، والتوريد، والخدمات اللوجستية، والبناء والمقاولات، والحلول التقنية في تشاد. يقع مقر الشركة في أنجمينا، وتقدم خدماتها للقطاعين الحكومي والخاص، والمنظمات الدولية، والمنظمات غير الحكومية، والشركات المحلية والعالمية، مع تغطية تمتد إلى تشاد ومنطقة وسط أفريقيا.',
+      'تعتمد الشركة على شبكة واسعة من الشراكات مع الشركات المحلية والإقليمية والدولية، مما يمكنها من توفير منتجات وخدمات عالية الجودة وفق المعايير العالمية. كما تعمل الشركة كشريك محلي للشركات العالمية الراغبة في دخول السوق التشادية والتوسع في أسواق وسط أفريقيا، من خلال التمثيل التجاري، وتطوير الأعمال، والتسويق، والتوزيع، والخدمات اللوجستية، وإدارة سلسلة الإمداد، وتنفيذ المشاريع.',
     ],
     en: [
-      'GBS is a multi-activity company specialized in supply, trade, and services, headquartered in Chad — supporting companies, NGOs, and development projects with reliable solutions across six core areas.',
+      'Global Business & Supplies (GBS) is a company specialized in general trade, import and export, supply, logistics, construction and contracting, and technology solutions in Chad. Headquartered in N\'Djamena, it serves the public and private sectors, international organizations, NGOs, and local and global companies across Chad and Central Africa.',
+      'GBS relies on a broad network of local, regional, and international partnerships, and acts as the local partner for global companies entering the Chadian market — through commercial representation, business development, marketing, distribution, logistics, supply chain management, and project execution.',
     ],
     fr: [
-      "GBS est une société multi-activités spécialisée dans l'approvisionnement, le commerce et les services, basée au Tchad — accompagnant entreprises, ONG et projets de développement avec des solutions fiables dans six domaines clés.",
+      "Global Business & Supplies (GBS) est une société spécialisée dans le commerce général, l'import-export, l'approvisionnement, la logistique, la construction et les solutions technologiques au Tchad. Basée à N'Djamena, elle sert les secteurs public et privé, les organisations internationales, les ONG et les entreprises locales et mondiales.",
+      "GBS s'appuie sur un large réseau de partenariats locaux, régionaux et internationaux et agit comme partenaire local des entreprises mondiales entrant sur le marché tchadien : représentation commerciale, développement des affaires, marketing, distribution, logistique et exécution de projets.",
     ],
     zh: [
-      'GBS 是一家总部位于乍得的多元业务公司，专注于供应、贸易和服务，在六大核心领域为企业、非政府组织和发展项目提供可靠的解决方案。',
+      'Global Business & Supplies (GBS) 是一家专注于乍得综合贸易、进出口、供应、物流、建筑承包与技术解决方案的公司。公司总部位于恩贾梅纳，为公共和私营部门、国际组织、非政府组织以及本地和全球企业提供服务，业务覆盖乍得及中非地区。',
+      'GBS 依托广泛的本地、地区与国际合作网络，并作为国际企业进入乍得市场的本地合作伙伴，提供商业代理、业务拓展、市场营销、分销、物流、供应链管理与项目执行等服务。',
     ],
   };
 
