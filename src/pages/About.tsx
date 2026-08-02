@@ -263,6 +263,49 @@ const About: React.FC = () => {
           </div>
         </section>
 
+        {/* Scope of work */}
+        <section className="pb-12 lg:pb-16">
+          <div className="section-container">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{scopeTitle}</h2>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">{scopeLead}</p>
+              <ul className="space-y-3 mb-8">
+                {scopeItems.map((item, i) => (
+                  <li key={i} className="flex gap-3 text-base text-muted-foreground leading-relaxed">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">{servicesLead}</p>
+              <ul className="space-y-3 mb-8">
+                {serviceItems.map((item, i) => (
+                  <li key={i} className="flex gap-3 text-base text-muted-foreground leading-relaxed">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">{itParagraph}</p>
+
+              <div className="grid sm:grid-cols-2 gap-5 mt-10">
+                <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
+                  <h3 className="font-bold text-lg text-primary mb-2">{visionTitle}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{visionText}</p>
+                </div>
+                <div className="bg-card border border-border rounded-2xl p-6 shadow-sm">
+                  <h3 className="font-bold text-lg text-primary mb-2">{missionTitle}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{missionText}</p>
+                </div>
+              </div>
+
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mt-8">{finalParagraph}</p>
+            </div>
+          </div>
+        </section>
+
+
+
         {/* Six Sectors */}
         <section className="py-12 lg:py-16 bg-muted/30">
           <div className="section-container">
