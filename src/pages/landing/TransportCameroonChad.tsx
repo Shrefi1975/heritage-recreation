@@ -264,6 +264,7 @@ const TransportCameroonChadLanding: React.FC<Props> = ({ contactHref }) => {
       contactHref={contactHref}
       lang={lang}
       onLangChange={setLang}
+      pageKey="transport"
     />
   );
 };

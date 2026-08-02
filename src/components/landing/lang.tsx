@@ -36,7 +36,7 @@ export const dirOf = (lang: LandingLang): 'rtl' | 'ltr' => (lang === 'ar' ? 'rtl
 /** Template-level UI strings (not page content). */
 export const landingUI: Record<LandingLang, {
   contactForm: string;
-  waFloat: string;
+  waFloat: (page: string) => string;
   waPage: (page: string) => string;
   langLabel: string;
   location: string;
@@ -46,10 +46,10 @@ export const landingUI: Record<LandingLang, {
 }> = {
   ar: {
     contactForm: 'نموذج التواصل',
-    waFloat:
-      'مرحباً! لقد ضغطت على أيقونة الواتساب من موقعكم الإلكتروني (Global Business & Supplies). أرغب في التواصل معكم ومعرفة المزيد عن خدماتكم. شكراً لكم!',
+    waFloat: (page) =>
+      `مرحبًا، أنا مهتم بخدمة ${page}، وقد تواصلت معكم من صفحة ${page} على موقع Global Business & Supplies (GBS). أرغب في مزيد من التفاصيل وعرض سعر. شكرًا لكم!`,
     waPage: (page) =>
-      `مرحباً! لقد زرت صفحة "${page}" على موقع Global Business & Supplies (GBS)، وأرغب في الاستفسار عن الخدمة والحصول على عرض سعر. شكراً لكم!`,
+      `مرحبًا، أنا مهتم بخدمة ${page}، وقد تواصلت معكم من صفحة ${page} على موقع Global Business & Supplies (GBS). أرغب في مزيد من التفاصيل وعرض سعر. شكرًا لكم!`,
     langLabel: 'اللغة',
     location: 'نجامينا، تشاد',
     emailLabel: 'البريد الإلكتروني',
@@ -58,10 +58,10 @@ export const landingUI: Record<LandingLang, {
   },
   en: {
     contactForm: 'Contact form',
-    waFloat:
-      'Hello! I clicked the WhatsApp icon on your website (Global Business & Supplies). I would like to get in touch and learn more about your services. Thank you!',
+    waFloat: (page) =>
+      `Hello, I am interested in the ${page} service, and I am contacting you from the ${page} page on the Global Business & Supplies (GBS) website. I would like more details and a quote. Thank you!`,
     waPage: (page) =>
-      `Hello! I visited the "${page}" page on the Global Business & Supplies (GBS) website and would like to enquire about the service and request a quote. Thank you!`,
+      `Hello, I am interested in the ${page} service, and I am contacting you from the ${page} page on the Global Business & Supplies (GBS) website. I would like more details and a quote. Thank you!`,
     langLabel: 'Language',
     location: "N'Djamena, Chad",
     emailLabel: 'Email',
@@ -70,10 +70,10 @@ export const landingUI: Record<LandingLang, {
   },
   fr: {
     contactForm: 'Formulaire de contact',
-    waFloat:
-      "Bonjour ! J'ai cliqué sur l'icône WhatsApp de votre site (Global Business & Supplies). Je souhaite vous contacter et en savoir plus sur vos services. Merci !",
+    waFloat: (page) =>
+      `Bonjour, je suis intéressé par le service ${page}, et je vous contacte depuis la page ${page} du site Global Business & Supplies (GBS). Je souhaite obtenir plus de détails et un devis. Merci !`,
     waPage: (page) =>
-      `Bonjour ! J'ai consulté la page « ${page} » du site Global Business & Supplies (GBS) et je souhaite me renseigner sur ce service et recevoir un devis. Merci !`,
+      `Bonjour, je suis intéressé par le service ${page}, et je vous contacte depuis la page ${page} du site Global Business & Supplies (GBS). Je souhaite obtenir plus de détails et un devis. Merci !`,
     langLabel: 'Langue',
     location: "N'Djamena, Tchad",
     emailLabel: 'E-mail',
@@ -82,10 +82,10 @@ export const landingUI: Record<LandingLang, {
   },
   zh: {
     contactForm: '联系表单',
-    waFloat:
-      '您好！我在贵公司网站（Global Business & Supplies）点击了 WhatsApp 图标，希望与您联系并了解更多服务信息。谢谢！',
+    waFloat: (page) =>
+      `您好，我对「${page}」服务很感兴趣，我是通过 Global Business & Supplies (GBS) 网站的「${page}」页面联系您的。希望了解更多详情并获取报价。谢谢！`,
     waPage: (page) =>
-      `您好！我浏览了 Global Business & Supplies (GBS) 网站的「${page}」页面，希望咨询该服务并获取报价。谢谢！`,
+      `您好，我对「${page}」服务很感兴趣，我是通过 Global Business & Supplies (GBS) 网站的「${page}」页面联系您的。希望了解更多详情并获取报价。谢谢！`,
     langLabel: '语言',
     location: '乍得，恩贾梅纳',
     emailLabel: '电子邮箱',
@@ -121,3 +121,51 @@ export const LandingLangSwitcher: React.FC<{
     ))}
   </div>
 );
+
+export type LandingPageKey =
+  | 'real-estate'
+  | 'car'
+  | 'heavy'
+  | 'transport'
+  | 'security'
+  | 'construction';
+
+/** Human-readable landing page names used inside WhatsApp messages. */
+export const landingPageNames: Record<LandingPageKey, Record<LandingLang, string>> = {
+  'real-estate': {
+    ar: 'إيجار المنازل والعقارات',
+    en: 'Property & Home Rental',
+    fr: 'Location de maisons et biens immobiliers',
+    zh: '房屋与房产租赁',
+  },
+  car: {
+    ar: 'تأجير السيارات',
+    en: 'Car Rental',
+    fr: 'Location de voitures',
+    zh: '汽车租赁',
+  },
+  heavy: {
+    ar: 'تأجير المعدات الثقيلة',
+    en: 'Heavy Equipment Rental',
+    fr: "Location d'engins lourds",
+    zh: '重型设备租赁',
+  },
+  transport: {
+    ar: 'النقل والشحن من الكاميرون إلى تشاد',
+    en: 'Transport & Freight from Cameroon to Chad',
+    fr: 'Transport et fret du Cameroun vers le Tchad',
+    zh: '喀麦隆至乍得运输与货运',
+  },
+  security: {
+    ar: 'كاميرات المراقبة وأنظمة الحماية',
+    en: 'CCTV & Security Systems',
+    fr: 'Vidéosurveillance et systèmes de sécurité',
+    zh: '监控摄像与安防系统',
+  },
+  construction: {
+    ar: 'البناء والمقاولات',
+    en: 'Construction & Contracting',
+    fr: 'Construction et travaux',
+    zh: '建筑与工程承包',
+  },
+};

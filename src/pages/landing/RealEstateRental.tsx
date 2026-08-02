@@ -241,6 +241,7 @@ const RealEstateRentalLanding: React.FC<{ contactHref?: string }> = ({ contactHr
       contactHref={contactHref}
       lang={lang}
       onLangChange={setLang}
+      pageKey="real-estate"
     />
   );
 };

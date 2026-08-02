@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Phone, MessageCircle, ArrowLeft, ArrowRight, CheckCircle2, Sparkles, Mail, MapPin, type LucideIcon } from 'lucide-react';
 import gbsLogo from '@/assets/logo-new.png';
-import { LandingLangSwitcher, landingUI, dirOf, type LandingLang } from './lang';
+import { LandingLangSwitcher, landingUI, landingPageNames, dirOf, type LandingLang, type LandingPageKey } from './lang';
 
 
 export interface LandingBenefit {
@@ -43,6 +43,7 @@ export interface LandingTemplateProps {
   seoText: string;
   lang?: LandingLang;
   onLangChange?: (l: LandingLang) => void;
+  pageKey?: LandingPageKey;
 }
 
 const PHONE = '23565555504';
@@ -56,8 +57,9 @@ const LandingTemplate: React.FC<LandingTemplateProps> = (p) => {
   const dir = dirOf(lang);
   const isRtl = dir === 'rtl';
   const Arrow = isRtl ? ArrowLeft : ArrowRight;
-  const WA = wa(ui.waPage(p.badge));
-  const WA_FLOAT = wa(ui.waFloat);
+  const pageName = p.pageKey ? landingPageNames[p.pageKey][lang] : p.badge;
+  const WA = wa(ui.waPage(pageName));
+  const WA_FLOAT = wa(ui.waFloat(pageName));
 
   React.useEffect(() => {
     document.title = p.metaTitle;
