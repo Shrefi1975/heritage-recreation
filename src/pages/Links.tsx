@@ -47,10 +47,19 @@ const SmartLink: React.FC<{ to: string; className?: string; children: React.Reac
     </Link>
   );
 
-type LinkItem = (typeof links)[number];
+type ViewItem = {
+  key: string;
+  title: string;
+  color: string;
+  icon: React.ComponentType<{ className?: string }>;
+  src: string;
+};
 
 const Links: React.FC = () => {
-  const [active, setActive] = React.useState<LinkItem | null>(null);
+  const [active, setActive] = React.useState<ViewItem | null>(null);
+
+  const openInternal = (to: string, title: string, color: string, icon: ViewItem['icon']) =>
+    setActive({ key: to, title, color, icon, src: STANDALONE ? `${SITE_URL}${to}` : to });
 
   React.useEffect(() => {
     document.body.style.overflow = active ? 'hidden' : '';
