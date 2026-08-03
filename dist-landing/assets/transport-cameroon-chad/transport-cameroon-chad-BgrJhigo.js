@@ -1,4 +1,4 @@
-import{c as t,j as a,M as l,a as u,B as d}from"../index-6J6bJ_6p.js";import{u as c,L as p}from"../LandingTemplate-Bi7f29ku.js";import{T as m}from"../truck-CNpi0c1u.js";/**
+import{c as t,j as a,M as l,a as u,B as d}from"../index-6MWlKkbz.js";import{u as c,L as p}from"../LandingTemplate-CsA-GAcq.js";import{T as m}from"../truck-C8gewIN3.js";/**
  * @license lucide-react v0.462.0 - ISC
  *
  * This source code is licensed under the ISC license.
