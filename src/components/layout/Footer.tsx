@@ -185,12 +185,6 @@ const Footer: React.FC = () => {
                     : language === 'zh' ? '乍得共和国'
                     : 'Republic of Chad'}
                 </p>
-                <p className="text-white/60 text-xs">
-                  {language === 'ar' ? 'وحدة · عمل · تقدّم'
-                    : language === 'fr' ? 'Unité · Travail · Progrès'
-                    : language === 'zh' ? '团结 · 工作 · 进步'
-                    : 'Unity · Work · Progress'}
-                </p>
               </div>
             </div>
           </div>
