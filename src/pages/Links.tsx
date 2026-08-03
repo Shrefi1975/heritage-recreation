@@ -47,10 +47,19 @@ const SmartLink: React.FC<{ to: string; className?: string; children: React.Reac
     </Link>
   );
 
-type LinkItem = (typeof links)[number];
+type ViewItem = {
+  key: string;
+  title: string;
+  color: string;
+  icon: React.ComponentType<{ className?: string }>;
+  src: string;
+};
 
 const Links: React.FC = () => {
-  const [active, setActive] = React.useState<LinkItem | null>(null);
+  const [active, setActive] = React.useState<ViewItem | null>(null);
+
+  const openInternal = (to: string, title: string, color: string, icon: ViewItem['icon']) =>
+    setActive({ key: to, title, color, icon, src: STANDALONE ? `${SITE_URL}${to}` : to });
 
   React.useEffect(() => {
     document.body.style.overflow = active ? 'hidden' : '';
@@ -140,7 +149,7 @@ const Links: React.FC = () => {
               >
                 <button
                   type="button"
-                  onClick={() => setActive(item)}
+                  onClick={() => openInternal(item.to, item.title, item.color, item.icon)}
                   className="w-full group flex items-center gap-4 rounded-2xl bg-card border border-border px-4 py-4 hover:-translate-y-1 hover:border-accent/50 hover:bg-muted/40 transition-all duration-300 text-start"
                 >
                   <span
@@ -161,12 +170,13 @@ const Links: React.FC = () => {
 
 
           {/* Main site */}
-          <SmartLink
-            to="/"
-            className="mt-6 flex items-center justify-center gap-2 rounded-2xl border border-accent/40 bg-accent/10 px-4 py-3.5 font-semibold text-accent hover:bg-accent hover:text-accent-foreground transition-all"
+          <button
+            type="button"
+            onClick={() => openInternal('/', 'الموقع الرسمي', '#F59E0B', Globe)}
+            className="w-full mt-6 flex items-center justify-center gap-2 rounded-2xl border border-accent/40 bg-accent/10 px-4 py-3.5 font-semibold text-accent hover:bg-accent hover:text-accent-foreground transition-all"
           >
             <Globe className="h-5 w-5" /> زيارة الموقع الرسمي
-          </SmartLink>
+          </button>
 
           {/* Socials */}
           <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -174,15 +184,21 @@ const Links: React.FC = () => {
               <a
                 key={s.label}
                 href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 aria-label={s.label}
+                onClick={(e) => {
+                  if (s.label === 'WhatsApp') return;
+                  e.preventDefault();
+                  if (s.href && s.href !== '#') {
+                    setActive({ key: s.label, title: s.label, color: '#94A3B8', icon: Globe, src: s.href });
+                  }
+                }}
                 className={`w-12 h-12 rounded-full ${s.bg} flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300`}
               >
                 <svg viewBox={s.box} fill="#ffffff" className="h-5 w-5"><path d={s.path} /></svg>
               </a>
             ))}
           </div>
+
 
           <p className="mt-8 text-center text-xs text-muted-foreground">
             © {new Date().getFullYear()} Global Business &amp; Supplies
@@ -216,12 +232,12 @@ const Links: React.FC = () => {
                 </span>
               </div>
               <iframe
-                key={active.to}
-                src={STANDALONE ? `${SITE_URL}${active.to}` : active.to}
+                key={active.key}
+                src={active.src}
                 title={active.title}
                 className="flex-1 w-full border-0 bg-background"
-                loading="lazy"
               />
+
             </motion.div>
           )}
         </AnimatePresence>
